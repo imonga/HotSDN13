@@ -1,0 +1,145 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: Cp1252
+
+@INPROCEEDINGS{Casado2012,
+  author = {Casado, Martin and Koponen, Teemu and Shenker, Scott and Tootoonchian,
+	Amin},
+  title = {{Fabric: a retrospective on evolving SDN}},
+  booktitle = {{Proc. of HotSDN}},
+  year = {2012},
+  acmid = {2342459},
+  doi = {10.1145/2342441.2342459},
+  isbn = {978-1-4503-1477-0},
+  keywords = {network architecture},
+  location = {Helsinki, Finland},
+  numpages = {6},
+  url = {http://doi.acm.org/10.1145/2342441.2342459}
+}
+
+@ELECTRONIC{oscars,
+  author = {{ESnet}},
+  title = {{On-Demand Secure Circuits and Advanced Reservation System}, http://www.es.net/services/virtual-circuits-oscars/},
+  url = {http://www.es.net/services/virtual-circuits-oscars/},
+  owner = {ASadasivarao},
+  timestamp = {2013.01.18}
+}
+
+@STANDARD{,
+  title = {{ovsdb-draft-00: The Open vSwitch Database Management Protocol}},
+  author = {IETF},
+  month = {August},
+  year = {2012},
+  owner = {ASadasivarao},
+  timestamp = {2013.01.20}
+}
+
+@STANDARD{netconf,
+  title = {{RFC6241: Network Configuration Protocol (NETCONF)}},
+  organization = {IETF},
+  institution = {IETF},
+  author = {IETF},
+  month = {June},
+  year = {2011},
+  owner = {ASadasivarao},
+  timestamp = {2013.01.17}
+}
+
+@STANDARD{mpls-tp,
+  title = {{RFC6215: A Framework for MPLS in Transport Networks}},
+  organization = {IETF},
+  institution = {IETF},
+  author = {IETF},
+  month = {July},
+  year = {2010},
+  owner = {ASadasivarao},
+  timestamp = {2013.01.18}
+}
+
+@STANDARD{gmpls,
+  title = {{Generalized Multi-Protocol Label Switching (GMPLS) Architecture}},
+  organization = {IETF},
+  institution = {IETF},
+  author = {IETF},
+  month = {July},
+  year = {2004},
+  owner = {ASadasivarao},
+  timestamp = {2013.01.18}
+}
+
+@STANDARD{mpls,
+  title = {{RFC3031: Multiprotocol Label Switching Architecture}},
+  organization = {IETF},
+  institution = {IETF},
+  author = {IETF},
+  month = {January},
+  year = {2001},
+  owner = {ASadasivarao},
+  timestamp = {2013.01.18}
+}
+
+@MISC{dtn,
+  author = {{Infinera}},
+  title = {{DTN} http://www.infinera.com/products/DTN.html},
+  owner = {ASadasivarao},
+  timestamp = {2013.01.19}
+}
+
+@STANDARD{otn,
+  title = {{G.709: Interfaces for Optical Transport Network}},
+  author = {{ITU}},
+  month = {Feb},
+  year = {2012},
+  owner = {ASadasivarao},
+  timestamp = {2013.01.20}
+}
+
+@INPROCEEDINGS{Mogul2012,
+  author = {Mogul, Jeffrey C. and Congdon, Paul},
+  title = {{Hey, you darned counters!: get off my ASIC!}},
+  booktitle = {{Proc. of HotSDN}},
+  year = {2012},
+  acmid = {2342447},
+  doi = {10.1145/2342441.2342447},
+  isbn = {978-1-4503-1477-0},
+  keywords = {openflow, software-defined counters},
+  location = {Helsinki, Finland},
+  numpages = {6},
+  url = {http://doi.acm.org/10.1145/2342441.2342447}
+}
+
+@ELECTRONIC{OF1.0,
+  author = {Pfaff, Ben},
+  month = {Dec},
+  year = {2009},
+  title = {{OpenFlow Switch Specifications 1.0.0}},
+  url = {http://www.openflow.org/documents/openflow-spec-v1.0.0.pdf},
+  owner = {ASadasivarao},
+  timestamp = {2013.01.17}
+}
+
+@INPROCEEDINGS{Suresh2012,
+  author = {Suresh, Lalith and Schulz-Zander, Julius and Merz, Ruben and Feldmann,
+	Anja and Vazao, Teresa},
+  title = {{Towards programmable enterprise WLANS with Odin}},
+  booktitle = {{Proc. of HotSDN}},
+  year = {2012},
+  acmid = {2342465},
+  doi = {10.1145/2342441.2342465},
+  isbn = {978-1-4503-1477-0},
+  keywords = {enterprise wlans, odin, openflow, sdn, virtualization},
+  location = {Helsinki, Finland},
+  numpages = {6},
+  url = {http://doi.acm.org/10.1145/2342441.2342465}
+}
+
+@STANDARD{tl1,
+  title = {{GR-199-CORE: TL1 Memory Administration Messages}},
+  organization = {Telcordia},
+  institution = {Telcordia},
+  author = {{Telcordia}},
+  month = {Dec},
+  year = {2005},
+  owner = {ASadasivarao},
+  timestamp = {2013.01.17}
+}
+

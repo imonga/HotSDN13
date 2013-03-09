@@ -1,0 +1,61 @@
+\begin{thebibliography}{10}
+
+\bibitem{Casado2012}
+{\sc Casado, M., Koponen, T., Shenker, S., and Tootoonchian, A.}
+\newblock {Fabric: a retrospective on evolving SDN}.
+\newblock In {\em {Proc. of HotSDN}\/} (2012).
+
+\bibitem{oscars}
+{\sc {ESnet}}.
+\newblock {On-Demand Secure Circuits and Advanced Reservation System},
+  http://www.es.net/services/virtual-circuits-oscars/.
+
+\bibitem{mpls}
+{\sc IETF}.
+\newblock {RFC3031: Multiprotocol Label Switching Architecture}, January 2001.
+
+\bibitem{gmpls}
+{\sc IETF}.
+\newblock {Generalized Multi-Protocol Label Switching (GMPLS) Architecture},
+  July 2004.
+
+\bibitem{mpls-tp}
+{\sc IETF}.
+\newblock {RFC6215: A Framework for MPLS in Transport Networks}, July 2010.
+
+\bibitem{netconf}
+{\sc IETF}.
+\newblock {RFC6241: Network Configuration Protocol (NETCONF)}, June 2011.
+
+\bibitem{ovsdb}
+{\sc IETF}.
+\newblock {ovsdb-draft-00: The Open vSwitch Database Management Protocol},
+  August 2012.
+
+\bibitem{dtn}
+{\sc {Infinera}}.
+\newblock {DTN} http://www.infinera.com/products/dtn.html.
+
+\bibitem{otn}
+{\sc {ITU}}.
+\newblock {G.709: Interfaces for Optical Transport Network}, Feb 2012.
+
+\bibitem{Mogul2012}
+{\sc Mogul, J.~C., and Congdon, P.}
+\newblock {Hey, you darned counters!: get off my ASIC!}
+\newblock In {\em {Proc. of HotSDN}\/} (2012).
+
+\bibitem{OF1.0}
+{\sc Pfaff, B.}
+\newblock {OpenFlow Switch Specifications 1.0.0}, Dec 2009.
+
+\bibitem{Suresh2012}
+{\sc Suresh, L., Schulz-Zander, J., Merz, R., Feldmann, A., and Vazao, T.}
+\newblock {Towards programmable enterprise WLANS with Odin}.
+\newblock In {\em {Proc. of HotSDN}\/} (2012).
+
+\bibitem{tl1}
+{\sc {Telcordia}}.
+\newblock {GR-199-CORE: TL1 Memory Administration Messages}, Dec 2005.
+
+\end{thebibliography}
