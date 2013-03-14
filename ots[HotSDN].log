@@ -1,10 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.6.11)  23 JAN 2013 19:08
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.6.11)  14 MAR 2013 01:10
 entering extended mode
-**C:/P4-SV-ASADASIVARAO/depot/Projects/NOON/Documents/Arch/Investigations/SDN/H
-otSDN13/ots[HotSDN].tex
-
-(C:/P4-SV-ASADASIVARAO/depot/Projects/NOON/Documents/Arch/Investigations/SDN/Ho
-tSDN13/ots[HotSDN].tex
+**C:/Users/asadasivarao/Documents/GitHub/HotSDN13/ots[HotSDN].tex
+(C:/Users/asadasivarao/Documents/GitHub/HotSDN13/ots[HotSDN].tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -16,9 +13,8 @@ german-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-
-(C:\P4-SV-ASADASIVARAO\depot\Projects\NOON\Documents\Arch\Investigations\SDN\Ho
-tSDN13\sig-alternate-10pt.cls (C:\MiKTeX\tex\latex\graphics\epsfig.sty
+(C:\Users\asadasivarao\Documents\GitHub\HotSDN13\sig-alternate-10pt.cls
+(C:\MiKTeX\tex\latex\graphics\epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
 (C:\MiKTeX\tex\latex\graphics\graphicx.sty
@@ -201,8 +197,7 @@ LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
 (C:\MiKTeX\tex\latex\ae\t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 )))
-(C:\P4-SV-ASADASIVARAO\depot\Projects\NOON\Documents\Arch\Investigations\SDN\Ho
-tSDN13\ots[HotSDN].aux)
+(C:\Users\asadasivarao\Documents\GitHub\HotSDN13\ots[HotSDN].aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
@@ -215,7 +210,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
- (C:\MiKTeX\tex\context\base\supp-pdf.mkii
+
+(C:\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
 \scratchdimen=\dimen123
@@ -269,28 +265,28 @@ l.78 \maketitle
                
 ? 
 
-Overfull \hbox (1.62727pt too wide) in paragraph at lines 81--86
-\ninept SDN brings to packet-optical back-bone net-works will be sub-
+Overfull \hbox (5.77715pt too wide) in paragraph at lines 81--83
+\ninept stra-tion use-case of a OpenFlow-enabled op-ti-cal vir-tual switch
  []
 
 
-Overfull \hbox (8.12733pt too wide) in paragraph at lines 89--92
+Overfull \hbox (8.12733pt too wide) in paragraph at lines 84--87
 \T1/aer/m/it/10 works\T1/aer/m/n/10 ; C.2.3 [\T1/aer/bx/n/10 Computer-Communica
 tion Net-works\T1/aer/m/n/10 ]:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--107
+Underfull \hbox (badness 10000) in paragraph at lines 93--102
 
  []
 
 
-Overfull \hbox (5.41829pt too wide) in paragraph at lines 108--118
+Overfull \hbox (5.41829pt too wide) in paragraph at lines 103--113
 \T1/aer/m/n/10 works, clos-ing the end-to-end path. Given the dis-tributed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--118
+Underfull \hbox (badness 10000) in paragraph at lines 103--113
 
  []
 
@@ -301,12 +297,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-Overfull \hbox (6.7767pt too wide) in paragraph at lines 131--139
+Overfull \hbox (6.7767pt too wide) in paragraph at lines 126--134
 \T1/aer/m/n/10 us con-sider the com-mon sce-nario found in ser-vice provider
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--139
+Underfull \hbox (badness 10000) in paragraph at lines 126--134
 
  []
 
@@ -314,146 +310,143 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--139
 File: MultiDomainLayer.png Graphic file (type png)
 
 <use MultiDomainLayer.png>
-Package pdftex.def Info: MultiDomainLayer.png used on input line 142.
+Package pdftex.def Info: MultiDomainLayer.png used on input line 137.
 (pdftex.def)             Requested size: 205.5173pt x 185.94423pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--154
+Underfull \hbox (badness 10000) in paragraph at lines 142--149
 
  []
 
 <MLwoOF.png, id=15, 473.51906pt x 188.95593pt>
 File: MLwoOF.png Graphic file (type png)
  <use MLwoOF.png>
-Package pdftex.def Info: MLwoOF.png used on input line 157.
+Package pdftex.def Info: MLwoOF.png used on input line 152.
 (pdftex.def)             Requested size: 236.75894pt x 94.47772pt.
 
-Overfull \hbox (4.92874pt too wide) in paragraph at lines 162--171
+Overfull \hbox (4.92874pt too wide) in paragraph at lines 157--166
 \T1/aer/m/n/10 en-abled light weight, vir-tual switch that man-ages a trans-
  []
 
 <MLwOF.png, id=17, 472.76625pt x 158.09062pt>
 File: MLwOF.png Graphic file (type png)
  <use MLwOF.png>
-Package pdftex.def Info: MLwOF.png used on input line 174.
+Package pdftex.def Info: MLwOF.png used on input line 169.
 (pdftex.def)             Requested size: 236.38254pt x 79.0451pt.
-LaTeX Font Info:    Try loading font information for T1+aett on input line 184.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 179.
 
 
 (C:\MiKTeX\tex\latex\ae\t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 179--187
+Underfull \hbox (badness 10000) in paragraph at lines 174--182
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--199
+[2 <C:/Users/asadasivarao/Documents/GitHub/HotSDN13/MultiDomainLayer.png> <C:/U
+sers/asadasivarao/Documents/GitHub/HotSDN13/MLwoOF.png> <C:/Users/asadasivarao/
+Documents/GitHub/HotSDN13/MLwOF.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 183--194
 
  []
 
-[2 <C:/P4-SV-ASADASIVARAO/depot/Projects/NOON/Documents/Arch/Investigations/SDN
-/HotSDN13/MultiDomainLayer.png> <C:/P4-SV-ASADASIVARAO/depot/Projects/NOON/Docu
-ments/Arch/Investigations/SDN/HotSDN13/MLwoOF.png> <C:/P4-SV-ASADASIVARAO/depot
-/Projects/NOON/Documents/Arch/Investigations/SDN/HotSDN13/MLwOF.png>]
 <OTSArch.png, id=23, 571.38469pt x 248.42813pt>
 File: OTSArch.png Graphic file (type png)
  <use OTSArch.png>
-Package pdftex.def Info: OTSArch.png used on input line 227.
+Package pdftex.def Info: OTSArch.png used on input line 222.
 (pdftex.def)             Requested size: 211.40901pt x 91.91696pt.
 
-Overfull \hbox (3.40723pt too wide) in paragraph at lines 235--242
+Overfull \hbox (3.40723pt too wide) in paragraph at lines 230--237
 []\T1/aer/m/n/10 OpenFlow [11] is very L2/L3 cen-tric as of to-day. Given
  []
 
 
-Overfull \hbox (4.08672pt too wide) in paragraph at lines 244--249
+Overfull \hbox (4.08672pt too wide) in paragraph at lines 239--244
 \T1/aer/m/n/10 plify con-trol plane by elim-i-nat-ing all the com-plex UNI/E-
  []
 
 <OTSExplicit.png, id=24, 609.77812pt x 347.79938pt>
 File: OTSExplicit.png Graphic file (type png)
  <use OTSExplicit.png>
-Package pdftex.def Info: OTSExplicit.png used on input line 252.
+Package pdftex.def Info: OTSExplicit.png used on input line 247.
 (pdftex.def)             Requested size: 225.61436pt x 128.68375pt.
 
-[3 <C:/P4-SV-ASADASIVARAO/depot/Projects/NOON/Documents/Arch/Investigations/SDN
-/HotSDN13/OTSArch.png> <C:/P4-SV-ASADASIVARAO/depot/Projects/NOON/Documents/Arc
-h/Investigations/SDN/HotSDN13/OTSExplicit.png>]
+[3 <C:/Users/asadasivarao/Documents/GitHub/HotSDN13/OTSArch.png>]
 <OTSImplicit.png, id=30, 606.76688pt x 362.85562pt>
 File: OTSImplicit.png Graphic file (type png)
  <use OTSImplicit.png>
-Package pdftex.def Info: OTSImplicit.png used on input line 278.
+Package pdftex.def Info: OTSImplicit.png used on input line 273.
 (pdftex.def)             Requested size: 224.50023pt x 134.25447pt.
 
-Overfull \hbox (5.59001pt too wide) in paragraph at lines 290--294
+Overfull \hbox (5.59001pt too wide) in paragraph at lines 285--289
 \T1/aer/m/n/10 vides multi-domain, high-bandwidth, vir-tual cir-cuits that
  []
 
 
-Overfull \hbox (4.71692pt too wide) in paragraph at lines 290--294
+Overfull \hbox (4.71692pt too wide) in paragraph at lines 285--289
 \T1/aer/m/n/10 guar-an-tee end-to-end net-work data trans-fer per-for-mance.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--294
+Underfull \hbox (badness 10000) in paragraph at lines 285--289
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--317
+Underfull \hbox (badness 10000) in paragraph at lines 303--312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--330
+Underfull \hbox (badness 10000) in paragraph at lines 313--325
 
  []
 
-[4 <C:/P4-SV-ASADASIVARAO/depot/Projects/NOON/Documents/Arch/Investigations/SDN
-/HotSDN13/OTSImplicit.png>] <LIMAN.png, id=36, 298.11375pt x 307.1475pt>
+[4 <C:/Users/asadasivarao/Documents/GitHub/HotSDN13/OTSExplicit.png> <C:/Users/
+asadasivarao/Documents/GitHub/HotSDN13/OTSImplicit.png>]
+<LIMAN.png, id=34, 298.11375pt x 307.1475pt>
 File: LIMAN.png Graphic file (type png)
-
-<use LIMAN.png>
-Package pdftex.def Info: LIMAN.png used on input line 354.
+ <use LIMAN.png>
+Package pdftex.def Info: LIMAN.png used on input line 349.
 (pdftex.def)             Requested size: 149.0565pt x 153.57336pt.
 
-Overfull \hbox (1.81882pt too wide) in paragraph at lines 376--387
+Overfull \hbox (1.81882pt too wide) in paragraph at lines 371--382
 \T1/aer/m/n/10 providers to ef-fi-ciently en-gi-neer, man-age and evolve their
  []
 
 
-Overfull \hbox (1.25706pt too wide) in paragraph at lines 376--387
+Overfull \hbox (1.25706pt too wide) in paragraph at lines 371--382
 \T1/aer/m/n/10 re-spec-tive of what un-der-ly-ing lay-ers (L1/L2/L3) or tech-
  []
 
-
-(C:\P4-SV-ASADASIVARAO\depot\Projects\NOON\Documents\Arch\Investigations\SDN\Ho
-tSDN13\ots[HotSDN].bbl [5 <C:/P4-SV-ASADASIVARAO/depot/Projects/NOON/Documents/
-Arch/Investigations/SDN/HotSDN13/LIMAN.png>]) [6
+[5 <C:/Users/asadasivarao/Documents/GitHub/HotSDN13/LIMAN.png>]
+(C:\Users\asadasivarao\Documents\GitHub\HotSDN13\ots[HotSDN].bbl) [6
 
 ]
-(C:\P4-SV-ASADASIVARAO\depot\Projects\NOON\Documents\Arch\Investigations\SDN\Ho
-tSDN13\ots[HotSDN].aux) ) 
+(C:\Users\asadasivarao\Documents\GitHub\HotSDN13\ots[HotSDN].aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  2541 strings out of 493923
- 29747 string characters out of 3154528
- 86422 words of memory out of 3000000
+ 29340 string characters out of 3154528
+ 87422 words of memory out of 3000000
  5767 multiletter control sequences out of 15000+200000
  61190 words of font info for 87 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 41i,19n,26p,538b,333s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmcsc10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmr7.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/MiKTeX/font
-s/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmsy7.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/MiKTeX/font
-s/type1/public/amsfonts/cm/cmtt10.pfb><C:/MiKTeX/fonts/type1/urw/helvetic/uhvb8
-a.pfb><C:/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/MiKTeX/fonts/type1/urw
-/times/utmb8a.pfb><C:/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/MiKTeX/fonts/
-type1/urw/times/utmri8a.pfb>
-Output written on ots[HotSDN].pdf (6 pages, 362291 bytes).
+ 41i,19n,26p,895b,333s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmbx10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr6.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmti10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmtt10.pfb><C:/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/MiKTeX/fonts/
+type1/urw/helvetic/uhvr8a.pfb><C:/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/M
+iKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/MiKTeX/fonts/type1/urw/times/utmri8a
+.pfb>
+Output written on ots[HotSDN].pdf (6 pages, 362754 bytes).
 PDF statistics:
  91 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
