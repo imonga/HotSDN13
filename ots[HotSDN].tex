@@ -388,7 +388,7 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 	outside the NE. We can run the OTS agent on a standalone server and establish a TL-1 session over
 	TCP/IP with the TL-1 agent. Also, if OTS needs to manage NE of another vendor, given that TL-1 is a
 	standardized interface, the migration should work without any hassles. Howver, there could be vendor 
-	specific TL-1 commands which would have to be handled.
+	specific TL-1 commands which would have to be handled appropriately if necessary.
 
 \section{Results and Observations}
 \label{sec:results}
@@ -427,10 +427,14 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 			\hline
 		\end{tabular}
 		\captionof{table}{Circuit path computation latencies (s)}
-		\label{measurements}
+		\label{tab:measurements}
 	\end{center}
 
-	
+	Given a fairly simple topology, the maximum latency observed is for the first circuit setup request. OpenFlow session needs
+	to be established with the OTS agents and hence the higher latency. Once the session is active, the time involved is for the
+	Controller to compute path based on the knowledge it has about the topology. Since this is a protoype, most of the topology
+	and node/link information is statically configured. The OTS Discovery agent is responsible to provide the Controller with the
+	necessary topology and network resource information.
 
 \section{Scope for Future Work}
 \label{sec:future}
@@ -443,7 +447,7 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 	the complete topology depending on the mode of operation (Implicit/Explicit). JSON formatted data 
 	could be used to exchange these topology extracts between OTS and the Controller. Security is another
 	key aspect in the system. Our implementaiton uses long-lived TCP/IP sessions between the Controller
-	and the OTS agent. SSL/TLS sessions could be used instead.
+	and the OTS agent. SSL/TLS sessions could be used instead. \\
 
 	From the point of view of standardization, many important functions that are inherent to core transport networks
 	have to be factored in. For example, protection and restoration. Typically, most of these today are part of the
