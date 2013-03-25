@@ -6,7 +6,6 @@
 \def\inf{\superscript{*}}
 \def\esn{\superscript{\dag}}
 
-<<<<<<< HEAD
 \usepackage{listings}
 \usepackage{color}
 \usepackage{capt-of}
@@ -32,8 +31,6 @@
   tabsize=3
 }
 
-=======
->>>>>>> changed the abstract
 \begin{document}
 %
 % --- Author Metadata here ---
@@ -106,16 +103,7 @@
 \maketitle
 
 \begin{abstract}
-<<<<<<< HEAD
 There have been a lot of proposals to unify the control and management of packet and circuit networks but none have been deployed widely. In this paper, we propose a simple programmable architecture that abstracts a core transport node into a programmable virtual switch, that meshes well with the software-defined network paradigm while leveraging the OpenFlow protocol paradigm for control. A demonstration use-case of a OpenFlow-enabled optical virtual switch implementation managing an small optical transport network for big-data applications is described. With appropriate extensions to OpenFlow, we discuss how the programmability and flexibility SDN brings to packet-optical backbone networks will be substantial in solving some of the complex multi-vendor, multi-layer, multi-domain issues service providers face today.
-=======
-	There have been a lot of proposals to unify the control and management of packet and circuit networks but none have been deployed widely. 
-	In this paper, we propose a simple programmable architecture that abstracts a core transport node into a programmable virtual switch, that meshes well with the software-defined network paradigm while leveraging the OpenFlow protocol paradigm for control.  A demonstration use-case of a  OpenFlow-enabled optical virtual switch implementation managing an small optical transport network for big-data applications is described. 
-	 With appropriate extensions to OpenFlow, we discuss how the programmability and flexibility SDN
-	brings to packet-optical backbone networks will be substantial in solving some of the complex multi-vendor,
-	multi-layer, multi-domain issues service providers face today. 
-
->>>>>>> changed the abstract
 \end{abstract}
 
 \category{C.2.1}{Computer-Communication Networks}{Network Architecture and Design}[Circuit-switching networks]
@@ -266,7 +254,6 @@ There have been a lot of proposals to unify the control and management of packet
 	
 	OpenFlow \cite{OF1.0} is very L2/L3 centric as of today. Given that we want to control optical transport
 	equipments, the protcol currently has no understanding of circuit switching constructs like time-slots or
-<<<<<<< HEAD
 	cross-connects (XCON). We are proposing extensions to OpenFlow by adding messages that allow provisioning/release of
 	circuits. Given that we are virtualizing the network, we use opaque, MPLS-style labels to represent links
 	(sequence of ingress/egress ports). We also indicate the style of circuit that needs to be setup (see
@@ -306,13 +293,6 @@ struct ofp_xconn {
 };
 OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 	\end{lstlisting}
-=======
-	XCONs. We are proposing extensions to OpenFlow by adding messages that allows provisioning/release of
-	circuits. Given that we are virtualizing the network, we use opaque, MPLS-style labels to represent links
-	(sequence of ingress/egress ports). We also indicate the style of circuit that needs to be setup (see
-	section \ref{sec:modes}). Along with these, the message includes service rate and latency paramters along
-	with provisioning actions (\texttt{ADD\_XCON} and \texttt{REM\_XCON})
->>>>>>> changed the abstract
 	
 	\subsection{Modes of Operation} \label{sec:modes}
 	We already described how OTS architecture can simplify control plane by eliminating all the complex
@@ -408,11 +388,7 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 	outside the NE. We can run the OTS agent on a standalone server and establish a TL-1 session over
 	TCP/IP with the TL-1 agent. Also, if OTS needs to manage NE of another vendor, given that TL-1 is a
 	standardized interface, the migration should work without any hassles. Howver, there could be vendor 
-<<<<<<< HEAD
 	specific TL-1 commands which would have to be handled appropriately if necessary.
-=======
-	specific TL-1 commands which would have to be handled.
->>>>>>> changed the abstract
 
 \section{Results and Observations}
 \label{sec:results}
@@ -436,7 +412,6 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 
 	\subsection{Measurements}
 	\label{sec:measure}
-<<<<<<< HEAD
 	The measurements done were to reserve a 40G circuit from Node A to B (Fig. \ref{fig:LIMAN}). This only includes the time 
 	taken by the Controller to compute the path and to send the ofp\_xconn message. This doesn't include the variable
 	network time for the message to reach OTS and for the optical transport NE XCON programming and/or GMPLS control
@@ -460,8 +435,6 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 	Controller to compute path based on the knowledge it has about the topology. Since this is a protoype, most of the topology
 	and node/link information is statically configured. The OTS Discovery agent is responsible to provide the Controller with the
 	necessary topology and network resource information.
-=======
->>>>>>> changed the abstract
 
 \section{Scope for Future Work}
 \label{sec:future}
@@ -474,7 +447,6 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 	the complete topology depending on the mode of operation (Implicit/Explicit). JSON formatted data 
 	could be used to exchange these topology extracts between OTS and the Controller. Security is another
 	key aspect in the system. Our implementaiton uses long-lived TCP/IP sessions between the Controller
-<<<<<<< HEAD
 	and the OTS agent. SSL/TLS sessions could be used instead. \\
 
 	From the point of view of standardization, many important functions that are inherent to core transport networks
@@ -484,9 +456,6 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 	plan as in the case of Implicit mode. Further, if domain specific parameters (like optical impairments, OSNR etc)
 	are needed, these need not be a part of the protocol itself. Instead, a management interface like OFConfig or
 	NetConf can be used to extract these.
-=======
-	and the OTS agent. SSL/TLS sessions could be used instead.
->>>>>>> changed the abstract
 
 \section{Conclusion}
 	We have demostrated a prototype virtual transport switch for optical long haul networks. OTS can be
@@ -498,11 +467,7 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 	With addition of appropriate extensions to OpenFlow, the transport infrastructure can be made more open
 	and programmable which allows multi-laye, multi-domain and multi-vendor optimizations in both core and
 	metro networks. Efforts are already underway within Open Networking Foundation (ONF) to allow
-<<<<<<< HEAD
 	standardization of transport extensions to OpenFlow (NewTransport WG). We hope HotSDN acts as
-=======
-	standardization of transport extensions to OpenFlow (Transport Discussion Group). We hope HotSDN acts as
->>>>>>> changed the abstract
 	a catalyst and provides a forum for the discussion of these ideas.
 
 \bibliographystyle{acm}
