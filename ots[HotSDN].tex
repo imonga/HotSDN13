@@ -6,6 +6,31 @@
 \def\inf{\superscript{*}}
 \def\esn{\superscript{\dag}}
 
+\usepackage{listings}
+\usepackage{color}
+\usepackage{capt-of}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=C++,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+}
+
 \begin{document}
 %
 % --- Author Metadata here ---
@@ -229,11 +254,45 @@ There have been a lot of proposals to unify the control and management of packet
 	
 	OpenFlow \cite{OF1.0} is very L2/L3 centric as of today. Given that we want to control optical transport
 	equipments, the protcol currently has no understanding of circuit switching constructs like time-slots or
-	XCONs. We are proposing extensions to OpenFlow by adding messages that allows provisioning/release of
+	cross-connects (XCON). We are proposing extensions to OpenFlow by adding messages that allow provisioning/release of
 	circuits. Given that we are virtualizing the network, we use opaque, MPLS-style labels to represent links
 	(sequence of ingress/egress ports). We also indicate the style of circuit that needs to be setup (see
 	section \ref{sec:modes}). Along with these, the message includes service rate and latency paramters along
-	with provisioning actions (\texttt{ADD\_XCON} and \texttt{REM\_XCON})
+	with provisioning actions (\texttt{ADD\_XCON} and \texttt{REM\_XCON}). For now, we assume the type of service/traffic 
+	to be GbE. However, this could be OC-3, OTU3, Fiber Channel and so on.
+
+	\begin{lstlisting}
+struct ofp_id {
+	// Host ID - DCN IP Address of the Node
+	uint32_t node;
+
+	// Flow ID maintained by the Controllre
+	uint32_t label;
+};
+
+struct ofp_xconn {
+	struct ofp_header header; // OFPT_VENDOR
+	uint32_t vendor;  // Vendor ID
+
+	uint8_t pad[4];
+		  
+	struct ofp_id src; // Source of the flow
+	struct ofp_id dst; // Destination of the flow
+		   
+	uint32_t rate;     // Rate of service (Mbps)
+	uint8_t latency; // Latency - 0 to 255
+	uint8_t style;     // Implicit = 1 Explicit = 2
+
+	// Unidirection = 1 Bidirectional = 2
+	uint8_t directional;
+
+	uint8_t pad_extra[1];
+
+	// ADD_XCONN = 0xFF REM_XCONN = 0xFE
+	struct ofp_action_header actions[0];
+};
+OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
+	\end{lstlisting}
 	
 	\subsection{Modes of Operation} \label{sec:modes}
 	We already described how OTS architecture can simplify control plane by eliminating all the complex
@@ -353,6 +412,25 @@ There have been a lot of proposals to unify the control and management of packet
 
 	\subsection{Measurements}
 	\label{sec:measure}
+	The measurements done were to reserve a 40G circuit from Node A to B (Fig. \ref{fig:LIMAN}). This only includes the time 
+	taken by the Controller to compute the path and to send the ofp\_xconn message. This doesn't include the variable
+	network time for the message to reach OTS and for the optical transport NE XCON programming and/or GMPLS control
+	messaging. These are not significant from the point of view of transport networks/NE as these are vendor/equipment
+	specific (XCON programming) and much of the latency in GMPLS messaging is due to fiber propogation delay. The control
+	plane messaging and NE timeslot programming is also dependent on the topology.
+
+	\begin{center}
+		\begin{tabular} { |  c | c | c | c | }
+			\hline
+			 Min & Max & Mean & Std. Dev \\ \hline
+			2	 & 7 & 2.84 & 0.98 \\
+			\hline
+		\end{tabular}
+		\captionof{table}{Circuit path computation latencies (s)}
+		\label{measurements}
+	\end{center}
+
+	
 
 \section{Scope for Future Work}
 \label{sec:future}
@@ -367,6 +445,14 @@ There have been a lot of proposals to unify the control and management of packet
 	key aspect in the system. Our implementaiton uses long-lived TCP/IP sessions between the Controller
 	and the OTS agent. SSL/TLS sessions could be used instead.
 
+	From the point of view of standardization, many important functions that are inherent to core transport networks
+	have to be factored in. For example, protection and restoration. Typically, most of these today are part of the
+	control plane (MPLS FRR or GMPLS restoration).Thorough investigations need to happen if
+	these have to be incorporated into OpenFlow. Or, these could continue to be a part of the underlying control
+	plan as in the case of Implicit mode. Further, if domain specific parameters (like optical impairments, OSNR etc)
+	are needed, these need not be a part of the protocol itself. Instead, a management interface like OFConfig or
+	NetConf can be used to extract these.
+
 \section{Conclusion}
 	We have demostrated a prototype virtual transport switch for optical long haul networks. OTS can be
 	estended to a packet switched IP/MPLS (PSN) core backbone too. The idea of extending Software Defined
@@ -377,7 +463,7 @@ There have been a lot of proposals to unify the control and management of packet
 	With addition of appropriate extensions to OpenFlow, the transport infrastructure can be made more open
 	and programmable which allows multi-laye, multi-domain and multi-vendor optimizations in both core and
 	metro networks. Efforts are already underway within Open Networking Foundation (ONF) to allow
-	standardization of transport extensions to OpenFlow (Transport Discussion Group). We hope HotSDN acts as
+	standardization of transport extensions to OpenFlow (NewTransport WG). We hope HotSDN acts as
 	a catalyst and provides a forum for the discussion of these ideas.
 
 \bibliographystyle{acm}
