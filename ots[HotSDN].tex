@@ -168,7 +168,7 @@ There have been a lot of proposals to unify the control and management of packet
 	center interconnects. Large amounts of data need to be exchanged between data centers. These data center
 	applications require connectivity and bandwidth irrespective of the technology that is used to enable
 	them. The underlying transport infrastructure could be IP, Packet/MPLS or Optical. If the resources viz.
-	ports, links and bandwidth can be virualized with generic abstractions, all the applications would need
+	ports, links and bandwidth can be virtualized with generic abstractions, all the applications would need
 	is to program this \emph{\bf virtual overlay network} of devices interconnected by links (Fig.
 	\ref{fig:MDL}). The network truly becomes open, programmable and flexible. \\
 		
@@ -200,18 +200,19 @@ There have been a lot of proposals to unify the control and management of packet
 	known location, the OTS agent can advertise the port, link and other reource information to the
 	Controller as part of the handshaking. The \textit{Discovery Agent} is responsible for discovery and
 	registration of SDN-controlled resources. It appropriately notifies the Controller dynamiclaly as and
-	when NE state changes (for example, removal/addition of line or tributory modules). In OpenFlow, this
+	when the NE and/or the Network state changes (for example, link up/down). In OpenFlow, this
 	typically happens via the switch \texttt{OFPT\_FEATURES\_REQUEST}, \texttt{OFPT\_FEATURES\_REPLY} and
 	other related \texttt{Modify State} messages \cite{OF1.0}. How the discovery agent retrieves this
 	information from the NE is upto the implementation or via proprietary vendor interfaces. \\
 	
 	The \textit{Control Agent} is responsible for monitoring and propogating notifications and alarms to the
 	Controller. FCAPS is a very important component in transport networks. It lets the network admins monitor
-	performance, faults and alarms in the network. Loss-of-light, Loss-of-sync, Loss-of-signal are some
+	performance, faults and alarms in the network. These include change notifications for any new equipment/facilities 
+	provisioned/deprovisioned. Loss-of-light, Loss-of-sync, Loss-of-signal are some 
 	examples of alarms. Faults could range from link failures to equipment failures. (Note that some of
 	equipment related alarms could be reported by both the Control and Discovery agents). This way, the
 	controller's state is asynchronously (or synchronously) kept consistent with the state of the underlying
-	network. The \textit{Dataplane Agent} is responsible to program the NE datapath to create/release
+	network. The \textit{Dataplane Agent} is responsible to program the NE datapath to create/update/release
 	circuits/LSP. The datapath entities could be Time slots, Cross connects (XCON) or MPLS labels. This
 	programs the underlying network infrastructure and helps complete the datapath. The controller sends
 	appropriate OpenFlow messages (similar to \texttt{OFPT\_FLOW\_MOD} message). Again, how the Dataplane
@@ -259,14 +260,14 @@ There have been a lot of proposals to unify the control and management of packet
 	(sequence of ingress/egress ports). We also indicate the style of circuit that needs to be setup (see
 	section \ref{sec:modes}). Along with these, the message includes service rate and latency paramters along
 	with provisioning actions (\texttt{ADD\_XCON} and \texttt{REM\_XCON}). For now, we assume the type of service/traffic 
-	to be GbE. However, this could be OC-3, OTU3, Fiber Channel and so on.
+	to be GbE. However, this could be OC-192, OTU3, Fibre Channel and so on.
 
 	\begin{lstlisting}
 struct ofp_id {
 	// Host ID - DCN IP Address of the Node
 	uint32_t node;
 
-	// Flow ID maintained by the Controllre
+	// Flow ID maintained by the Controller
 	uint32_t label;
 };
 
@@ -283,7 +284,7 @@ struct ofp_xconn {
 	uint8_t latency; // Latency - 0 to 255
 	uint8_t style;     // Implicit = 1 Explicit = 2
 
-	// Unidirection = 1 Bidirectional = 2
+	// Unidirectional = 1 Bidirectional = 2
 	uint8_t directional;
 
 	uint8_t pad_extra[1];
@@ -324,7 +325,7 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 	OTS architecture into existing transport networks. Without disrupting current deployments, service
 	providers may choose to continue using intra-domain control plane while still being SDN aware. From a
 	Controller's perspective, this edge-to-edge intra-domain path appears as a single network fabric of a
-	given capacity. Service providers guagingt the necessary network management effort, can gradually make
+	given capacity. Service providers depending on the necessary management effort, can gradually make
 	all the NEs SDN capable, moving to an explicit deployment model.
 
 	\begin{figure}[htb]
@@ -387,7 +388,7 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 	channel (just like a network admin would). Using TL-1 gives the flexibility of running OTS instance
 	outside the NE. We can run the OTS agent on a standalone server and establish a TL-1 session over
 	TCP/IP with the TL-1 agent. Also, if OTS needs to manage NE of another vendor, given that TL-1 is a
-	standardized interface, the migration should work without any hassles. Howver, there could be vendor 
+	standardized interface, the migration should work without any hassles. However, there could be vendor 
 	specific TL-1 commands which would have to be handled appropriately if necessary.
 
 \section{Results and Observations}
@@ -416,14 +417,14 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 	taken by the Controller to compute the path and to send the ofp\_xconn message. This doesn't include the variable
 	network time for the message to reach OTS and for the optical transport NE XCON programming and/or GMPLS control
 	messaging. These are not significant from the point of view of transport networks/NE as these are vendor/equipment
-	specific (XCON programming) and much of the latency in GMPLS messaging is due to fiber propogation delay. The control
+	specific (XCON programming) and much of the latency in GMPLS messaging is due to fiber propagation delay. The control
 	plane messaging and NE timeslot programming is also dependent on the topology.
 
 	\begin{center}
 		\begin{tabular} { |  c | c | c | c | }
 			\hline
 			 Min & Max & Mean & Std. Dev \\ \hline
-			2	 & 7 & 2.84 & 0.98 \\
+			  2   &   7    & 2.84  & 0.98 \\
 			\hline
 		\end{tabular}
 		\captionof{table}{Circuit path computation latencies (s)}
@@ -434,7 +435,7 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 	to be established with the OTS agents and hence the higher latency. Once the session is active, the time involved is for the
 	Controller to compute path based on the knowledge it has about the topology. Since this is a protoype, most of the topology
 	and node/link information is statically configured. The OTS Discovery agent is responsible to provide the Controller with the
-	necessary topology and network resource information.
+	necessary topology and network resource information. This is part of the next phase of work.
 
 \section{Scope for Future Work}
 \label{sec:future}
@@ -450,22 +451,22 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 	and the OTS agent. SSL/TLS sessions could be used instead. \\
 
 	From the point of view of standardization, many important functions that are inherent to core transport networks
-	have to be factored in. For example, protection and restoration. Typically, most of these today are part of the
+	have to be factored in. For example, protection and restoration. Typically, these are part of the
 	control plane (MPLS FRR or GMPLS restoration).Thorough investigations need to happen if
 	these have to be incorporated into OpenFlow. Or, these could continue to be a part of the underlying control
-	plan as in the case of Implicit mode. Further, if domain specific parameters (like optical impairments, OSNR etc)
+	plane as in the case of Implicit mode. Further, if domain specific parameters (like optical impairments, OSNR etc)
 	are needed, these need not be a part of the protocol itself. Instead, a management interface like OFConfig or
-	NetConf can be used to extract these.
+	NETCONF can be used to extract these.
 
 \section{Conclusion}
-	We have demostrated a prototype virtual transport switch for optical long haul networks. OTS can be
+	We have demonstrated a prototype virtual transport switch for optical long haul networks. OTS can be
 	estended to a packet switched IP/MPLS (PSN) core backbone too. The idea of extending Software Defined
 	Networking concepts to transport provides compelling technical and economical advantages to large service
 	providers to efficiently engineer, manage and evolve their networks. Network virtualization through OTS
 	allows building an overlay network that applications can program to meet their specific bandwidth
 	requirements irrespective of what underlying layers (L1/L2/L3) or technologies (OTN/MPLS/IP) are used.
 	With addition of appropriate extensions to OpenFlow, the transport infrastructure can be made more open
-	and programmable which allows multi-laye, multi-domain and multi-vendor optimizations in both core and
+	and programmable which allows multi-layer, multi-domain and multi-vendor optimizations in both core and
 	metro networks. Efforts are already underway within Open Networking Foundation (ONF) to allow
 	standardization of transport extensions to OpenFlow (NewTransport WG). We hope HotSDN acts as
 	a catalyst and provides a forum for the discussion of these ideas.
