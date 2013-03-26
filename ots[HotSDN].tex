@@ -172,14 +172,21 @@ There have been a lot of proposals to unify the control and management of packet
 \section{Architecture}
 \label{sec:arch}
 		
-	The main idea here is \emph{network virtualization}: how various entities in the network could be virtualized.
-	Let us consider the common scenario found in service provider networks. The network is segmented into
-	various layers each running their own control plane for routing and signaling (Fig. \ref{fig:MLwoOF}).
-	These L1/L2/L3 equipments may all possibly be sold by different vendors. Multi-layer integration becomes
-	a challenge and service provider now has to use multiple EMS/NMS to manage the entire network. The
-	interaction between these protocols at different layers introduces other intricacies such as graceful
-	failure propagation. If there is a fiber cut (Layer 1), the devices need to appropriately raise alarms to
-	notify the edge devices on the upper layers (L2/L3). \\
+	The central approach  \emph{abstracts}  the interface between packet and circuit layers leading to \emph{virtualization}
+	of the transport layer. Let us consider (Fig. \ref{fig:MLD}) - a common scenario found in service provider networks. The network is segmented into
+	various layers each running their own control plane for routing and signaling. Each layer may have equipment from different vendors. Multi-layer
+	integration becomes a challenge as 1) GMPLS protocols for multi-layer require UNI relationship which hides each layer's topology (Fig. \ref{fig:MLwoOF})
+	 2) multi-vendor implementations of GMPLS protocols and path-finding are fairly different with interoperability at a least common denominator of functionality 
+	 3) different EMS/NMS systems are ultimately used to manually manage each vendor, leading to a static, pre-planned network solution. \\
+		
+%	The main idea here is \emph{network virtualization}: how various entities in the network could be virtualized.
+%	Let us consider the common scenario found in service provider networks. The network is segmented into
+%	various layers each running their own control plane for routing and signaling (Fig. \ref{fig:MLwoOF}).
+%	These L1/L2/L3 equipments may all possibly be sold by different vendors. Multi-layer integration becomes
+%	a challenge and service provider now has to use multiple EMS/NMS to manage the entire network. The
+%	interaction between these protocols at different layers introduces other intricacies such as graceful
+%	failure propagation. If there is a fiber cut (Layer 1), the devices need to appropriately raise alarms to
+%	notify the edge devices on the upper layers (L2/L3). \\
 
 \begin{figure}[htb]
 	\centering
@@ -188,13 +195,19 @@ There have been a lot of proposals to unify the control and management of packet
 	\label{fig:MDL}
 	\end{figure}
 	
-	Applications at the edges of these networks require datapath for exchange of data. For example, data
-	center interconnects. Large amounts of data need to be exchanged between data centers. These data center
-	applications require connectivity and bandwidth irrespective of the technology that is used to enable
-	them. The underlying transport infrastructure could be IP, Packet/MPLS or Optical. If the resources viz.
-	ports, links and bandwidth can be virualized with generic abstractions, all the applications would need
-	is to program this \emph{\bf virtual overlay network} of devices interconnected by links (Fig.
-	\ref{fig:MDL}). The network truly becomes open, programmable and flexible. \\
+	On the other hand, the applications at the edges of these networks require high-bandwidth paths for exchange of data, for example data center interconnects.
+	These connections require connectivity and varying amounts of bandwidth, irrespective of the protocols used to transport the information. The underlying
+	transport infrastructure could be packet/MPLS, OTN or MPLS-TP. If the resources viz. ports, links and bandwidth can be virtualized with generic abstractions, 
+	the applications would need to program this \emph{\bf virtual overlay network} of devices interconnected by links (Fig. \ref{fig:MDL}). The network then truly becomes open, 
+	programmable and flexible. \\
+	
+%	Applications at the edges of these networks require datapath for exchange of data. For example, data
+%	center interconnects. Large amounts of data need to be exchanged between data centers. These data center
+%	applications require connectivity and bandwidth irrespective of the technology that is used to enable
+%	them. The underlying transport infrastructure could be IP, Packet/MPLS or Optical. If the resources viz.
+%	ports, links and bandwidth can be virualized with generic abstractions, all the applications would need
+%	is to program this \emph{\bf virtual overlay network} of devices interconnected by links (Fig.
+%	\ref{fig:MDL}). The network truly becomes open, programmable and flexible. \\
 		
 	\begin{figure}[htb]
 	\centering
@@ -204,14 +217,13 @@ There have been a lot of proposals to unify the control and management of packet
 	\end{figure}
 
 	\textit{Open Transport Switch (OTS)} is an OpenFlow \cite{OF1.0} enabled light weight, virtual switch
-	that manages a transport network element (NE). With a controller, the transport domain now could be
-	controlled via SDN. Applications can now talk to the controller to request provision trunks of required
-	capacity with additional QoS parameters if any. This gives service providers a unified view and of the
-	network (Fig. \ref{fig:MLwOF}). This also greatly simplifies the control plane to manage NEs at multiple
-	layers. The SDN Controller can interface with smart applications to perform path computation,
-	provisioning and monitoring. The application requesting the bandwidth will only be concerned about the
-	capacity and QoS guarantees. It is up to the controller (or the application talking to the controller) to
-	find an end-to-end path going over multiple domains/layers, meeting the SLA.
+	that represents a transport network element (NE).  Applications can now talk to an SDN controller to request
+	provisioning of cross-connects or aggregation of packet interfaces into optical trunks with the required
+	capacity and relevant QoS parameters, if needed. This gives service providers the ability to create a unified view  of the
+	network (Fig. \ref{fig:MLwOF}). These abstractions remove the need for control plane interactions at packet-optical layer transitions.
+	 The SDN Controller offers the virtualized topology to smart applications enabling them to perform optimal path computation,
+	provisioning and monitoring based on their constraints. Applications not interested in their own path-computation can request the
+	bandwidth capacity and QoS, outsourcing the end-to-end path computation to a specialized carrier controller/application that can match the request for the end-to-end path across multiple domains/layers to meet the requested SLA. 
 
 	\begin{figure}[htb]
 	\centering
