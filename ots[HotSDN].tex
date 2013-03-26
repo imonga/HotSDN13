@@ -103,7 +103,7 @@
 \maketitle
 
 \begin{abstract}
-There have been a lot of proposals to unify the control and management of packet and circuit networks but none have been deployed widely. In this paper, we propose a simple programmable architecture that abstracts a core transport node into a programmable virtual switch, that meshes well with the software-defined network paradigm while leveraging the OpenFlow protocol paradigm for control. A demonstration use-case of a OpenFlow-enabled optical virtual switch implementation managing an small optical transport network for big-data applications is described. With appropriate extensions to OpenFlow, we discuss how the programmability and flexibility SDN brings to packet-optical backbone networks will be substantial in solving some of the complex multi-vendor, multi-layer, multi-domain issues service providers face today.
+There have been a lot of proposals to unify the control and management of packet and circuit networks but none have been deployed widely in commercial or research networks. In this paper, we propose a simple programmable architecture that abstracts a core transport node into a programmable virtual switch, that meshes well with the software-defined network paradigm while leveraging the OpenFlow set of protocols for control. A demonstration use-case of a OpenFlow-enabled optical virtual switch implementation managing an small optical transport network for big-data applications is described. With appropriate extensions to OpenFlow, we discuss how the programmability and flexibility SDN brings to packet-optical backbone networks will be substantial in solving some of the complex multi-vendor, multi-layer, multi-domain issues service providers face today.
 \end{abstract}
 
 \category{C.2.1}{Computer-Communication Networks}{Network Architecture and Design}[Circuit-switching networks]
@@ -115,46 +115,70 @@ There have been a lot of proposals to unify the control and management of packet
 \keywords{transport networks, optical networks, virtualization}
 
 \section{Introduction}
-	The growth in trafifc volumes and types has prompted service providers to rethink not only how to
-	engineer their IP and optical backbone transport, but also to ease operational and management overhead.
-	In the core, traditionally, the approach has been to place all the network functions within the IP layer
-	(routing, signaling, protection) and use dumb optical trunks interconnecting these L2/L3 devices.
-	Therefore, a significant amount of service providers' investments are in the underlying transport
-	infrastructure. This optical transport layer offers high-capacity links which typically allows tens of
-	gigabits of traffic to be transported in a point-to-point fashion. Given the increasing bandwidth
-	demands, the shift is towards deploying 100Gbps per wavelength in the long haul backbone, with a gradual
-	transition to a converged packet-optical core. \\
-			
-	Due to the increased capacity, transport network elements are being supplemented with more intelligent
-	set of features for easier management. Service providers typically manage their L3 networks and transport
-	layer operations independently. In this multi-layer setup, provisioning bandwidth involves multiple
+	Significant advances in optical technologies, bit rates and deployment of Optical Transport Network (OTN) protocols have enabled transport networks to provide flexible 			multiplexing and switching functions in addition to basic data transport and survivability. In addition, transport network elements are  being supplemented with more intelligent 		set of features for flexible management. The growth in traffic volumes, changing traffic profiles and types of applications has prompted service providers to rethink not only how to
+	engineer their IP and optical backbone transport optimally, but also to ease their operational and management overhead.\\
+	
+	
+	 In the Internet core, traditionally, the design approach has been to place all the network functions within the IP layer
+	(routing, signaling, protection) and use static optical trunks interconnecting these L2/L3 devices. This hop-by-hop architecture of packet processing and forwarding can be optimized significantly by taking advantage of the dynamic transport capabilities offered by the state-of-the-art optical network.  In addition, service providers 
+	typically manage their L3 networks and transport layer operations independently. In this multi-layer setup, provisioning bandwidth involves multiple
 	steps: creating necessary interfaces and forwarding entries in the L3 devices and provisioning circuits
 	in the transport networks, closing the end-to-end path. Given the distributed nature of the protocols,
-	various UNI and NNI signaling needs to happen before the actual datapath is complete. This is adding
+	various UNI and NNI signaling needs to happen before the actual datapath is complete. This approach adds
 	complexities to the transport control plane mechanisms (GMPLS \cite{gmpls}/MPLS \cite{mpls}/MPLS-TP
-	\cite{mpls-tp}). It becomes crucial to have flexibility, programmability and automated control from an
-	OAM\&P and FCAPS perspective. Multi-layer optimization is not just technical, but an economical issue
-	too. \\
-		
-	Software Defined Networking (SDN) decouples data plane from control plane. This promises the necessary
-	manageability, flexibility and evolvability that is required in large service provider networks.
-	Although, much of SDN efforts today are concentrated on networks at Layer 2 and above. Many vendors have
+	\cite{mpls-tp}). \\
+	
+	The latest trends in application delivery architectures, like cloud computing and consolidated data-centers, are aggregating the user traffic 
+	and also creating large flows between such data-centers for data and state synchronization. The need for cost and performance optimization as well as creation
+	of new network services relevant to the above applications is  driving the requirements for dynamic multi-layer and multi-domain networking. Multi-layer optimization,
+	with applications such as dynamic optical bypass, does not only have technology drivers, but is also influenced heavily by capex economics. Even though
+	the advantages of such approaches are well understood and protocols created by the vendor community, the complexity of protocols, vendor interoperability 
+	and lack of management tools has prevented these from being deployed.\\
+	
+	Software-Defined Networking (SDN), that decouples the data plane from control plane, has been discussed recently [reference to Saurav's ECOC paper] 
+	as a viable and simple approach to provide the required functionality. The approach promises meeting the manageability, flexibility, and evolvability 
+	requirements in large service provider networks. Although, much of SDN efforts today are concentrated on networks at Layer 2 and above. Many vendors have
 	added OpenFlow capabilities to their Gigabit Ethernet switches. There have also been efforts in building
 	hardware architectures \cite{Mogul2012} and switch fabrics for efficient OpenFlow enabled network devices
-	\cite{Casado2012}. Not just WANs, SDN has been making inroads into LANs also. OpenFlow based enterprise
-	wireless network management has also been proposed \cite{Suresh2012}. All these are Ethernet/IP centric.
-	Echoing a similar philosopy, many of the SDN ideas can be extended to optical transport networks too.
+	\cite{Casado2012}. OpenFlow based enterprise wireless network management has also been proposed \cite{Suresh2012}. All these are Ethernet/IP centric.\\
+	
+	In this paper we propose a virtual abstraction of the transport element, Optical Transport Switch (OTS), that integrates within a SDN framework and
+	offers simple OpenFlow protocol based control of the packet-optical cross-connect and bandwidth allocation capability of the optical element. In addition,
+	we showcase a prototype implementation of this abstraction and deployment at a test network in Long Island. We show SDN as a
+	viable approach for building wide-area packet-optical networks. 
+	
+			 
+%		Therefore, a significant amount of service providers' investments are in the underlying transport
+%	infrastructure. This optical transport layer offers high-capacity links which typically allows tens of
+%	gigabits of traffic to be transported in a point-to-point fashion. Given the increasing bandwidth
+%	demands, the shift is towards deploying 100Gbps per wavelength in the long haul backbone, with a gradual
+%	transition to a converged packet-optical core. \\
+			
+	 
+%	The optical transport layer offers high-capacity links which typically allows tens of gigabits of traffic to be transported in a point-to-point fashion.
+%	.  It becomes crucial to have flexibility, programmability and automated control from an
+%	OAM\&P and FCAPS perspective. Multi-layer optimization is not just technical, but an economical issue
+%	too. \\
+		
+%	Software Defined Networking (SDN) decouples data plane from control plane. This promises the necessary
+%	manageability, flexibility and evolvability that is required in large service provider networks.
+%	Although, much of SDN efforts today are concentrated on networks at Layer 2 and above. Many vendors have
+%	added OpenFlow capabilities to their Gigabit Ethernet switches. There have also been efforts in building
+%	hardware architectures \cite{Mogul2012} and switch fabrics for efficient OpenFlow enabled network devices
+%	\cite{Casado2012}. Not just WANs, SDN has been making inroads into LANs also. OpenFlow based enterprise
+%	wireless network management has also been proposed \cite{Suresh2012}. All these are Ethernet/IP centric.
+%	Echoing a similar philosophy, many of the SDN ideas can be extended to optical transport networks too.
 
 \section{Architecture}
 \label{sec:arch}
 		
-	The main idea here is \emph{network virtualizaton}: how vairous entities in the network could be virtualized.
+	The main idea here is \emph{network virtualization}: how various entities in the network could be virtualized.
 	Let us consider the common scenario found in service provider networks. The network is segmented into
 	various layers each running their own control plane for routing and signaling (Fig. \ref{fig:MLwoOF}).
 	These L1/L2/L3 equipments may all possibly be sold by different vendors. Multi-layer integration becomes
 	a challenge and service provider now has to use multiple EMS/NMS to manage the entire network. The
 	interaction between these protocols at different layers introduces other intricacies such as graceful
-	failure propogation. If there is a fiber cut (Layer 1), the devices need to appropriately raise alarms to
+	failure propagation. If there is a fiber cut (Layer 1), the devices need to appropriately raise alarms to
 	notify the edge devices on the upper layers (L2/L3). \\
 
 \begin{figure}[htb]
@@ -205,7 +229,7 @@ There have been a lot of proposals to unify the control and management of packet
 	other related \texttt{Modify State} messages \cite{OF1.0}. How the discovery agent retrieves this
 	information from the NE is upto the implementation or via proprietary vendor interfaces. \\
 	
-	The \textit{Control Agent} is responsible for monitoring and propogating notifications and alarms to the
+	The \textit{Control Agent} is responsible for monitoring and propagating notifications and alarms to the
 	Controller. FCAPS is a very important component in transport networks. It lets the network admins monitor
 	performance, faults and alarms in the network. Loss-of-light, Loss-of-sync, Loss-of-signal are some
 	examples of alarms. Faults could range from link failures to equipment failures. (Note that some of
