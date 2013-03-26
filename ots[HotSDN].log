@@ -1,48 +1,52 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.6.11)  24 MAR 2013 22:24
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  25 MAR 2013 18:55
 entering extended mode
-**C:/Users/asadasivarao/Documents/GitHub/HotSDN13/ots[HotSDN].tex
-(C:/Users/asadasivarao/Documents/GitHub/HotSDN13/ots[HotSDN].tex
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-(C:\Users\asadasivarao\Documents\GitHub\HotSDN13\sig-alternate-10pt.cls
-(C:\MiKTeX\tex\latex\graphics\epsfig.sty
+ \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**ots[HotSDN].tex
+(./ots[HotSDN].tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
+ icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, or
+iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
+ lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, pol
+ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
+ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
+.
+(./sig-alternate-10pt.cls
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
-(C:\MiKTeX\tex\latex\graphics\graphicx.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\MiKTeX\tex\latex\graphics\keyval.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(C:\MiKTeX\tex\latex\graphics\graphics.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\MiKTeX\tex\latex\graphics\trig.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(C:\MiKTeX\tex\latex\00miktex\graphics.cfg
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(C:\MiKTeX\tex\latex\pdftex-def\pdftex.def
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(C:\MiKTeX\tex\generic\oberdiek\infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
 )
-(C:\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count79
 ))
@@ -52,10 +56,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \epsfxsize=\dimen104
 \epsfysize=\dimen105
 )
-(C:\MiKTeX\tex\latex\amsfonts\amssymb.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2009/06/22 v3.00
 
-(C:\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \@emptytoks=\toks15
 \symAMSa=\mathgroup4
@@ -63,24 +67,24 @@ Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 ))
-(C:\MiKTeX\tex\latex\ams\math\amsmath.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip41
 
 For additional information on amsmath, use the `?' option.
-(C:\MiKTeX\tex\latex\ams\math\amstext.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(C:\MiKTeX\tex\latex\ams\math\amsgen.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen106
 ))
-(C:\MiKTeX\tex\latex\ams\math\amsbsy.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen107
 )
-(C:\MiKTeX\tex\latex\ams\math\amsopn.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count80
@@ -155,7 +159,7 @@ LaTeX Warning: You have requested document class `sig-alternate-10pt',
 
 Document Class: sig-alternate 2009/04/22 - V2.4 - based on acmproc.cls V1.3 <No
 v. 30 '99>
-(C:\MiKTeX\tex\latex\base\latexsym.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
@@ -186,17 +190,19 @@ LaTeX Info: Redefining \cite on input line 1223.
 \acmcopyr=\toks32
 \boilerplate=\toks33
 \copyrightetc=\toks34
-(C:\MiKTeX\tex\latex\base\fontenc.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
- (C:\MiKTeX\tex\latex\base\t1enc.def
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 )
 LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
 
-(C:\MiKTeX\tex\latex\ae\t1aer.fd
+(/usr/local/texlive/2011/texmf-dist/tex/latex/ae/t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
-))) (C:\MiKTeX\tex\latex\listings\listings.sty
+)))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count109
 \lst@gtempboxa=\box30
 \lst@token=\toks35
@@ -212,36 +218,40 @@ File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 \belowcaptionskip=\skip45
 \lst@maxwidth=\dimen126
 
-(C:\MiKTeX\tex\latex\listings\lstmisc.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \c@lstnumber=\count115
 \lst@skipnumbers=\count116
 \lst@framebox=\box31
 )
-(C:\MiKTeX\tex\latex\listings\listings.cfg
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-(C:\MiKTeX\tex\latex\graphics\color.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
- (C:\MiKTeX\tex\latex\00miktex\color.cfg
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
-) (C:\MiKTeX\tex\latex\capt-of\capt-of.sty
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/capt-of/capt-of.sty
 Package: capt-of 2009/12/29 v0.2 standard captions outside of floats
 )
-(C:\MiKTeX\tex\latex\listings\lstlang1.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-(C:\MiKTeX\tex\latex\listings\lstlang1.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-(C:\MiKTeX\tex\latex\listings\lstmisc.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
-(C:\Users\asadasivarao\Documents\GitHub\HotSDN13\ots[HotSDN].aux)
+(./ots[HotSDN].aux)
+\openout1 = `ots[HotSDN].aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
@@ -255,7 +265,7 @@ LaTeX Font Info:    ... okay on input line 34.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
 
-(C:\MiKTeX\tex\context\base\supp-pdf.mkii
+(/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count117
 \scratchdimen=\dimen127
@@ -268,51 +278,57 @@ LaTeX Font Info:    ... okay on input line 34.
 \MPnumerator=\count121
 \makeMPintoPDFobject=\count122
 \everyMPtoPDFconversion=\toks37
+) (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
 )
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 \c@lstlisting=\count123
-LaTeX Font Info:    Try loading font information for U+msa on input line 103.
- (C:\MiKTeX\tex\latex\amsfonts\umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 103.
- (C:\MiKTeX\tex\latex\amsfonts\umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-)
-LaTeX Font Info:    Try loading font information for U+lasy on input line 103.
-(C:\MiKTeX\tex\latex\base\ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-LaTeX Font Info:    Try loading font information for OMS+aer on input line 103.
 
- (C:\MiKTeX\tex\latex\ae\omsaer.fd
-File: omsaer.fd 1999/12/27
-)
-LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 \maketitle
-                
-? 
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 \maketitle
-                
-? 
-
-Overfull \hbox (5.77715pt too wide) in paragraph at lines 106--108
-\ninept stra-tion use-case of a OpenFlow-enabled op-ti-cal vir-tual switch
+Overfull \hbox (4.09758pt too wide) in paragraph at lines 106--108
+\ninept solv-ing some of the com-plex multi-vendor, multi-layer, multi-
  []
 
 
@@ -322,186 +338,224 @@ tion Net-works\T1/aer/m/n/10 ]:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--127
+Underfull \hbox (badness 10000) in paragraph at lines 118--120
 
  []
 
 
-Overfull \hbox (5.41829pt too wide) in paragraph at lines 128--138
-\T1/aer/m/n/10 works, clos-ing the end-to-end path. Given the dis-tributed
+Overfull \hbox (1.4706pt too wide) in paragraph at lines 122--130
+[]\T1/aer/m/n/10 In the In-ter-net core, tra-di-tion-ally, the de-sign ap-proac
+h
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--138
+Underfull \hbox (badness 10000) in paragraph at lines 122--130
 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (1.1062pt too wide) in paragraph at lines 131--137
+[]\T1/aer/m/n/10 The lat-est trends in ap-pli-ca-tion de-liv-ery ar-chi-tec-tur
+es,
+ []
 
- [1{C:/Users/asadasivarao/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--137
+
+ []
 
 
-]
-Overfull \hbox (6.7767pt too wide) in paragraph at lines 151--159
+Underfull \hbox (badness 10000) in paragraph at lines 138--144
+
+ []
+
+
+Overfull \hbox (6.39671pt too wide) in paragraph at lines 145--149
+\T1/aer/m/n/10 ple Open-Flow pro-to-col based con-trol of the packet-optical
+ []
+
+
+Overfull \hbox (6.7767pt too wide) in paragraph at lines 175--183
 \T1/aer/m/n/10 us con-sider the com-mon sce-nario found in ser-vice provider
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--159
+Underfull \hbox (badness 10000) in paragraph at lines 175--183
 
  []
 
-<MultiDomainLayer.png, id=14, 411.03563pt x 371.88937pt>
+[1
+
+{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<MultiDomainLayer.png, id=11, 411.03563pt x 371.88937pt>
 File: MultiDomainLayer.png Graphic file (type png)
 
 <use MultiDomainLayer.png>
-Package pdftex.def Info: MultiDomainLayer.png used on input line 162.
+Package pdftex.def Info: MultiDomainLayer.png used on input line 186.
 (pdftex.def)             Requested size: 205.5173pt x 185.94423pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--174
+Underfull \hbox (badness 10000) in paragraph at lines 191--198
 
  []
 
-<MLwoOF.png, id=15, 473.51906pt x 188.95593pt>
+<MLwoOF.png, id=12, 473.51906pt x 188.95593pt>
 File: MLwoOF.png Graphic file (type png)
  <use MLwoOF.png>
-Package pdftex.def Info: MLwoOF.png used on input line 177.
+Package pdftex.def Info: MLwoOF.png used on input line 201.
 (pdftex.def)             Requested size: 236.75894pt x 94.47772pt.
 
-Overfull \hbox (4.92874pt too wide) in paragraph at lines 182--191
+Overfull \hbox (4.92874pt too wide) in paragraph at lines 206--215
 \T1/aer/m/n/10 en-abled light weight, vir-tual switch that man-ages a trans-
  []
 
-<MLwOF.png, id=17, 472.76625pt x 158.09062pt>
+<MLwOF.png, id=14, 472.76625pt x 158.09062pt>
 File: MLwOF.png Graphic file (type png)
  <use MLwOF.png>
-Package pdftex.def Info: MLwOF.png used on input line 194.
+Package pdftex.def Info: MLwOF.png used on input line 218.
 (pdftex.def)             Requested size: 236.38254pt x 79.0451pt.
-LaTeX Font Info:    Try loading font information for T1+aett on input line 204.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 228.
 
 
-(C:\MiKTeX\tex\latex\ae\t1aett.fd
+(/usr/local/texlive/2011/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 199--207
+Underfull \hbox (badness 10000) in paragraph at lines 223--231
 
  []
 
-[2 <C:/Users/asadasivarao/Documents/GitHub/HotSDN13/MultiDomainLayer.png> <C:/U
-sers/asadasivarao/Documents/GitHub/HotSDN13/MLwoOF.png> <C:/Users/asadasivarao/
-Documents/GitHub/HotSDN13/MLwOF.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 208--219
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--243
 
  []
 
-<OTSArch.png, id=23, 571.38469pt x 248.42813pt>
+[2 <./MultiDomainLayer.png> <./MLwoOF.png> <./MLwOF.png>]
+LaTeX Font Info:    Try loading font information for U+msa on input line 252.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 252.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 252.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+<OTSArch.png, id=20, 571.38469pt x 248.42813pt>
 File: OTSArch.png Graphic file (type png)
  <use OTSArch.png>
-Package pdftex.def Info: OTSArch.png used on input line 247.
+Package pdftex.def Info: OTSArch.png used on input line 271.
 (pdftex.def)             Requested size: 211.40901pt x 91.91696pt.
 
-Overfull \hbox (3.40723pt too wide) in paragraph at lines 255--263
+Overfull \hbox (3.40723pt too wide) in paragraph at lines 279--287
 []\T1/aer/m/n/10 OpenFlow [11] is very L2/L3 cen-tric as of to-day. Given
  []
 
-[3 <C:/Users/asadasivarao/Documents/GitHub/HotSDN13/OTSArch.png>]
-Overfull \hbox (4.08672pt too wide) in paragraph at lines 298--303
+
+Overfull \hbox (4.08672pt too wide) in paragraph at lines 322--327
 \T1/aer/m/n/10 plify con-trol plane by elim-i-nat-ing all the com-plex UNI/E-
  []
 
-<OTSExplicit.png, id=29, 609.77812pt x 347.79938pt>
-File: OTSExplicit.png Graphic file (type png)
- <use OTSExplicit.png>
-Package pdftex.def Info: OTSExplicit.png used on input line 306.
-(pdftex.def)             Requested size: 225.61436pt x 128.68375pt.
 
-<OTSImplicit.png, id=30, 606.76688pt x 362.85562pt>
+Underfull \vbox (badness 1014) has occurred while \output is active []
+
+ [3 <./OTSArch.png>] <OTSExplicit.png, id=26, 609.77812pt x 347.79938pt>
+File: OTSExplicit.png Graphic file (type png)
+
+<use OTSExplicit.png>
+Package pdftex.def Info: OTSExplicit.png used on input line 330.
+(pdftex.def)             Requested size: 225.61436pt x 128.68375pt.
+ <OTSImplicit.png, id=27, 606.76688pt x 362.85562pt>
 File: OTSImplicit.png Graphic file (type png)
- <use OTSImplicit.png>
-Package pdftex.def Info: OTSImplicit.png used on input line 332.
+
+<use OTSImplicit.png>
+Package pdftex.def Info: OTSImplicit.png used on input line 356.
 (pdftex.def)             Requested size: 224.50023pt x 134.25447pt.
 
-Overfull \hbox (5.59001pt too wide) in paragraph at lines 344--348
+Overfull \hbox (5.59001pt too wide) in paragraph at lines 368--372
 \T1/aer/m/n/10 vides multi-domain, high-bandwidth, vir-tual cir-cuits that
  []
 
 
-Overfull \hbox (4.71692pt too wide) in paragraph at lines 344--348
+Overfull \hbox (4.71692pt too wide) in paragraph at lines 368--372
 \T1/aer/m/n/10 guar-an-tee end-to-end net-work data trans-fer per-for-mance.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--348
-
- []
-
-[4 <C:/Users/asadasivarao/Documents/GitHub/HotSDN13/OTSExplicit.png> <C:/Users/
-asadasivarao/Documents/GitHub/HotSDN13/OTSImplicit.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 362--371
+Underfull \hbox (badness 10000) in paragraph at lines 368--372
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--384
+Underfull \hbox (badness 10000) in paragraph at lines 386--395
 
  []
 
-<LIMAN.png, id=35, 298.11375pt x 307.1475pt>
+[4 <./OTSExplicit.png> <./OTSImplicit.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 396--408
+
+ []
+
+<LIMAN.png, id=32, 298.11375pt x 307.1475pt>
 File: LIMAN.png Graphic file (type png)
  <use LIMAN.png>
-Package pdftex.def Info: LIMAN.png used on input line 408.
+Package pdftex.def Info: LIMAN.png used on input line 432.
 (pdftex.def)             Requested size: 149.0565pt x 153.57336pt.
- [5 <C:/Users/asadasivarao/Documents/GitHub/HotSDN13/LIMAN.png>]
-Overfull \hbox (2.7665pt too wide) in paragraph at lines 441--451
+ [5 <./LIMAN.png>]
+Overfull \hbox (2.7665pt too wide) in paragraph at lines 465--475
 \T1/aer/m/n/10 /alarm pro-poga-tion and port/link dis-cov-ery re-spec-tively.
  []
 
 
-Overfull \hbox (2.67033pt too wide) in paragraph at lines 441--451
+Overfull \hbox (2.67033pt too wide) in paragraph at lines 465--475
 \T1/aer/m/n/10 Cur-rently, the ports, op-ti-cal chan-nels and links are hand-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 441--451
+Underfull \hbox (badness 10000) in paragraph at lines 465--475
 
  []
 
 
-Overfull \hbox (1.81882pt too wide) in paragraph at lines 461--472
+Overfull \hbox (1.81882pt too wide) in paragraph at lines 485--496
 \T1/aer/m/n/10 providers to ef-fi-ciently en-gi-neer, man-age and evolve their
  []
 
 
-Overfull \hbox (1.25706pt too wide) in paragraph at lines 461--472
+Overfull \hbox (1.25706pt too wide) in paragraph at lines 485--496
 \T1/aer/m/n/10 re-spec-tive of what un-der-ly-ing lay-ers (L1/L2/L3) or tech-
  []
 
-(C:\Users\asadasivarao\Documents\GitHub\HotSDN13\ots[HotSDN].bbl) [6]
-(C:\Users\asadasivarao\Documents\GitHub\HotSDN13\ots[HotSDN].aux) ) 
+(./ots[HotSDN].bbl) [6] (./ots[HotSDN].aux) ) 
 Here is how much of TeX's memory you used:
- 4002 strings out of 493923
- 50346 string characters out of 3154528
- 161628 words of memory out of 3000000
- 7196 multiletter control sequences out of 15000+200000
- 63536 words of font info for 91 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 41i,20n,58p,895b,1609s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/MiKTeX/f
-onts/enc/dvips/fontname/8r.enc}<C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10
-.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.
-pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr9.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmti10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb
-><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/MiKTeX/fonts/type1/urw
-/helvetic/uhvb8a.pfb><C:/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/MiKTeX/
-fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C
-:/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ots[HotSDN].pdf (6 pages, 378874 bytes).
+ 4305 strings out of 493633
+ 57628 string characters out of 3143378
+ 165654 words of memory out of 3000000
+ 7483 multiletter control sequences out of 15000+200000
+ 58640 words of font info for 87 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 41i,7n,58p,880b,1070s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2011/texmf-dis
+t/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2011/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr6.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmti10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmtt10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmtt8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/urw/times/utmb8a.p
+fb></usr/local/texlive/2011/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/l
+ocal/texlive/2011/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ots[HotSDN].pdf (6 pages, 342137 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
+ 85 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
