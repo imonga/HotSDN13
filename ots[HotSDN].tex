@@ -103,7 +103,7 @@
 \maketitle
 
 \begin{abstract}
-There have been a lot of proposals to unify the control and management of packet and circuit networks but none have been deployed widely. In this paper, we propose a simple programmable architecture that abstracts a core transport node into a programmable virtual switch, that meshes well with the software-defined network paradigm while leveraging the OpenFlow protocol paradigm for control. A demonstration use-case of a OpenFlow-enabled optical virtual switch implementation managing an small optical transport network for big-data applications is described. With appropriate extensions to OpenFlow, we discuss how the programmability and flexibility SDN brings to packet-optical backbone networks will be substantial in solving some of the complex multi-vendor, multi-layer, multi-domain issues service providers face today.
+There have been a lot of proposals to unify the control and management of packet and circuit networks but none have been deployed widely. In this paper, we propose a simple programmable architecture that abstracts a core transport node into a programmable virtual switch, that meshes well with the software-defined network paradigm while leveraging the OpenFlow protocol paradigm for control. A demonstration use-case of a OpenFlow-enabled optical virtual switch implementation managing a small optical transport network for big-data applications is described. With appropriate extensions to OpenFlow, we discuss how the programmability and flexibility SDN brings to packet-optical backbone networks will be substantial in solving some of the complex multi-vendor, multi-layer, multi-domain issues service providers face today.
 \end{abstract}
 
 \category{C.2.1}{Computer-Communication Networks}{Network Architecture and Design}[Circuit-switching networks]
@@ -115,6 +115,42 @@ There have been a lot of proposals to unify the control and management of packet
 \keywords{transport networks, optical networks, virtualization}
 
 \section{Introduction}
+	Significant advances in optical technologies, bit rates and deployment of Optical Transport Network (OTN) protocols have enabled transport networks to provide flexible 
+	multiplexing and switching functions in addition to basic data transport and survivability. In addition, transport network elements are  being supplemented with more intelligent 
+	set of features for flexible management. The growth in traffic volumes, changing traffic profiles and types of applications has prompted service providers to rethink not only how to
+	engineer their IP and optical backbone transport optimally, but also to ease their operational and management overhead.\\
+	
+	In the Internet core, traditionally, the design approach has been to place all the network functions within the IP layer
+	(routing, signaling, protection) and use static optical trunks interconnecting these L2/L3 devices. This hop-by-hop architecture of packet processing
+	and forwarding can be optimized significantly by taking advantage of the dynamic transport capabilities offered by the state-of-the-art optical network. 
+	In addition, service providers 
+	typically manage their L3 networks and transport layer operations independently. In this multi-layer setup, provisioning bandwidth involves multiple
+	steps: creating necessary interfaces and forwarding entries in the L3 devices and provisioning circuits
+	in the transport networks, closing the end-to-end path. The distributed nature of the protocols 
+	needs UNI and NNI signaling to happen before the actual datapath is complete. This approach adds
+	complexities to the transport control plane mechanisms (GMPLS \cite{gmpls}/MPLS \cite{mpls}/MPLS-TP
+	\cite{mpls-tp}). \\
+	
+	The latest trends in application delivery architectures, like cloud computing and consolidated data-centers, are aggregating the user traffic 
+	and also creating large flows between such data-centers for data and state synchronization. The need for cost and performance optimization as well as creation
+	of new network services relevant to the above applications is  driving the requirements for dynamic multi-layer and multi-domain networking. Multi-layer optimization,
+	with applications such as dynamic router bypass, does not only have technology drivers, but also influences CapEx economics. Even though
+	the advantages of such approaches are well understood and protocols created by the vendor community, the complexity of protocols, vendor interoperability 
+	and lack of management tools has prevented these from being deployed.\\
+	
+	Software-Defined Networking (SDN), that decouples the data plane from control plane, has been discussed recently \cite{Das2012} 
+	as a viable and simple approach to provide the required functionality. The approach promises meeting the manageability, flexibility, and evolvability 
+	requirements in large service provider networks. Although, much of SDN efforts today are concentrated on networks at Layer 2 and above. Many vendors have
+	added OpenFlow capabilities to their Gigabit Ethernet switches. There have also been efforts in building
+	hardware architectures \cite{Mogul2012} and switch fabrics for efficient OpenFlow enabled network devices
+	\cite{Casado2012}. OpenFlow based enterprise wireless network management has also been proposed \cite{Suresh2012}. All these are Ethernet/IP centric.\\
+	
+	In this paper we propose a virtual abstraction of the transport element, Open Transport Switch (OTS), that integrates within a SDN framework and
+	offers simple OpenFlow protocol based control of the packet-optical cross-connect and bandwidth allocation capability of the optical element. In addition,
+	we showcase a prototype implementation of this abstraction and deployment at a test network in Long Island. We show SDN as a
+	viable approach for building wide-area packet-optical networks. 
+
+\iffalse
 	The growth in trafifc volumes and types has prompted service providers to rethink not only how to
 	engineer their IP and optical backbone transport, but also to ease operational and management overhead.
 	In the core, traditionally, the approach has been to place all the network functions within the IP layer
@@ -144,11 +180,48 @@ There have been a lot of proposals to unify the control and management of packet
 	\cite{Casado2012}. Not just WANs, SDN has been making inroads into LANs also. OpenFlow based enterprise
 	wireless network management has also been proposed \cite{Suresh2012}. All these are Ethernet/IP centric.
 	Echoing a similar philosopy, many of the SDN ideas can be extended to optical transport networks too.
-
+\fi
 \section{Architecture}
 \label{sec:arch}
+	The central approach  \emph{abstracts}  the interface between packet and circuit layers leading to \emph{virtualization}
+	of the transport layer. Let us consider (Fig. \ref{fig:MDL}) - a common scenario found in service provider networks. The network is segmented into
+	various layers each running their own control plane for routing and signaling. Each layer may have equipment from different vendors. Multi-layer
+	integration becomes a challenge as 1) GMPLS protocols for multi-layer require UNI relationship which hides each layer's topology (Fig. \ref{fig:MLwoOF})
+	2) Multi-vendor implementations of GMPLS protocols and path-finding are fairly different with interoperability at a least common denominator of functionality 
+	3) Different EMS/NMS systems are ultimately used to manually manage each vendor, leading to a static, pre-planned network solution. \\
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[scale=0.50]{MultiDomainLayer.png}
+	\caption{Multi-Domain, Multi-Layer}
+	\label{fig:MDL}
+	\end{figure}
+	
+	On the other hand, the applications at the edges of these networks require high-bandwidth paths for exchange of data, for example data center interconnects.
+	These connections require connectivity and varying amounts of bandwidth, irrespective of the protocols used to transport the information. The underlying
+	transport infrastructure could be packet/MPLS, OTN or MPLS-TP. If the resources viz. ports, links and bandwidth can be virtualized with generic abstractions, 
+	the applications would need to program this \emph{\bf virtual overlay network} of devices interconnected by links (Fig. \ref{fig:MDL}). The network then truly becomes open, 
+	programmable and flexible. \\
 		
-	The main idea here is \emph{network virtualizaton}: how vairous entities in the network could be virtualized.
+	\begin{figure}[htb]
+	\centering
+	\includegraphics[scale=0.50]{MLwoOF.png}
+	\caption{Service Provider Transport Network}
+	\label{fig:MLwoOF}
+	\end{figure}
+
+	\textit{Open Transport Switch (OTS)} is an OpenFlow \cite{OF1.0} enabled light weight, virtual switch
+	that represents a transport network element (NE).  Applications can now talk to an SDN controller to request
+	provisioning of cross-connects or aggregation of packet interfaces into optical trunks with the required
+	capacity and relevant QoS parameters, if needed. This gives service providers the ability to create a unified view  of the
+	network (Fig. \ref{fig:MLwOF}). These abstractions remove the need for control plane interactions at packet-optical layer transitions.
+	The SDN Controller offers the virtualized topology to smart applications enabling them to perform optimal path computation,
+	provisioning and monitoring based on their constraints. Applications not interested in their own path-computation can request the
+	bandwidth capacity and QoS, outsourcing the end-to-end path computation to a specialized carrier controller/application that can match the request for the end-to-end path across multiple domains/layers to meet the requested SLA. 
+
+\iffalse
+	The main idea here is \emph{virtualizaton} and \emph{abstraction}: how vairous entities in the network could 
+	be virtualized into nodes/links/bandwidth and how to abstract these resources to give programmability.
 	Let us consider the common scenario found in service provider networks. The network is segmented into
 	various layers each running their own control plane for routing and signaling (Fig. \ref{fig:MLwoOF}).
 	These L1/L2/L3 equipments may all possibly be sold by different vendors. Multi-layer integration becomes
@@ -164,8 +237,8 @@ There have been a lot of proposals to unify the control and management of packet
 	\label{fig:MDL}
 	\end{figure}
 	
-	Applications at the edges of these networks require datapath for exchange of data. For example, data
-	center interconnects. Large amounts of data need to be exchanged between data centers. These data center
+	Applications at the edges of these networks require datapath for exchange of data. For example, consider data
+	center interconnects; Large amounts of data need to be exchanged between data centers. These data center
 	applications require connectivity and bandwidth irrespective of the technology that is used to enable
 	them. The underlying transport infrastructure could be IP, Packet/MPLS or Optical. If the resources viz.
 	ports, links and bandwidth can be virtualized with generic abstractions, all the applications would need
@@ -188,7 +261,7 @@ There have been a lot of proposals to unify the control and management of packet
 	provisioning and monitoring. The application requesting the bandwidth will only be concerned about the
 	capacity and QoS guarantees. It is up to the controller (or the application talking to the controller) to
 	find an end-to-end path going over multiple domains/layers, meeting the SLA.
-
+\fi
 	\begin{figure}[htb]
 	\centering
 	\includegraphics[scale=0.50]{MLwOF.png}
@@ -206,7 +279,7 @@ There have been a lot of proposals to unify the control and management of packet
 	information from the NE is upto the implementation or via proprietary vendor interfaces. \\
 	
 	The \textit{Control Agent} is responsible for monitoring and propogating notifications and alarms to the
-	Controller. FCAPS is a very important component in transport networks. It lets the network admins monitor
+	Controller, allowing network admins to monitor 
 	performance, faults and alarms in the network. These include change notifications for any new equipment/facilities 
 	provisioned/deprovisioned. Loss-of-light, Loss-of-sync, Loss-of-signal are some 
 	examples of alarms. Faults could range from link failures to equipment failures. (Note that some of
@@ -235,9 +308,7 @@ There have been a lot of proposals to unify the control and management of packet
 		and maintain an active OpenFlow session with the Controller.
 	    \item OTS Southbound Interface: The southbound interface from the OTS agent to the NE could also be 
 		standard interfaces which allows OTS implementations to be multi-vendor ready. For example, TL-1 \cite{tl1} 
-		is a widely used network element management protocol amongst RBOCs. If TL-1 is used to communicate between 
-		OTS and the NE, we could potentially map OTS to any vendor's NE which can understand TL-1. Other
-		examples include NETCONF \cite{netconf}
+		is a widely used network element management protocol amongst RBOCs. Other 	examples include NETCONF \cite{netconf}
   	    \item Multiple OTS agents could be run on the same NE. These different instances can be given a restricted 
 		view of the ports/wavelengths present on the NE and manage their respective resourcess only 
 		(See section \ref{sec:otvs})
@@ -296,8 +367,8 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 	\end{lstlisting}
 	
 	\subsection{Modes of Operation} \label{sec:modes}
-	We already described how OTS architecture can simplify control plane by eliminating all the complex
-	UNI/E-NNI/GMPLS routing and signaling protocols. Integrating OTS into today's large service provider transport
+	We already described how SDN for transport can provide an alternative to interworking UNI/NNI 
+	protocols associated with distributed routing and signaling. Integrating OTS into today's large service provider transport
 	networks may become a very complex exercise (we are infact trying to make transport networks more
 	flexible and manageable!). Taking this into account, we propose two modes of operation to allow smooth
 	integration of, and transition to trasnport SDN.
@@ -311,13 +382,13 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 
 	\subsubsection{Explicit Mode}
 	Fig. \ref{fig:OTSExplicit} depicts \textit{Explicit Mode}. In this mode, the Controller has the knowledge
-	of every NE in every domain/layer. After optimal path computation, provisioning a circuit becomes a
-	simple exercise of the Controller programming all the transport devices along the path in a hop-by-hop
+	of every NE in a particular domain. After optima/constrainedl path computation, provisioning a circuit becomes a
+	exercise of the Controller programming all the transport devices along the path in a hop-by-hop
 	manner across single or multiple transport domains.
 	
 	\subsubsection{Implicit Mode} Fig. \ref{fig:OTSImplicit} depicts \textit{Implicit Mode}. In this mode,
 	the Controller is aware of only the edge nodes in every transport domain (Ethernet/MPLS/OTN). Within the
-	domain, the existing routing and signaling control plane can be used to setup intra-domain path. The
+	domain, the existing routing and signaling control plane can be used to setup path. The
 	Controller would send provisioning request, specifying the source and destination to the SDN-aware nodes
 	at the edges of the network. The source node will then trigger MPLS/GMPLS control plane to setup the circuit.
 	Controller being aware of NE type and capabilities, \textit{stitches} these segments across multiple
@@ -335,42 +406,53 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 	\label{fig:OTSImplicit}
 	\end{figure}
 
-\section{Desgin and Implementation}
+	Note that these are not the only two feasible models in Transport SDN. In a given network, it is possible to have
+	SDN circuits created with mix of implicit and explicit modes. This prototype demonstrates the larger concept.
+
+\section{Implementation}
 \label{sec:design}
 	Section \ref{sec:arch} described the building blocks of OTS. The prototype OTS implementation only has the 
 	Dataplane agent functionality built in. Rest of the subsystems will be integrated in the future. 
 
 	\subsection{Controller}
 	\label{sec:oscars}
-	On-Demand Secure Circuits and Advanced Reservation System (OSCARS) \cite{oscars} is a provisioning system
-	developed by Energy Sciences Network (ESnet). It provides multi-domain, high-bandwidth, virtual circuits
-	that guarantee end-to-end network data transfer performance. OSCARS virtual circuits carry fifty percent
-	of ESnet's annual 60 petabytes of traffic. (Fill in more details here) \\
-	
-	OSCARS has all the necessary components to provision and release circuits, and the path computation.
-	OSCARS was extended by adding OpenFlow interfaces (including the extensions defined in section
-	\ref{sec:ofext}). This makes OSCARS the SDN controller. OSCARS then establishes an OpenFlow session with
-	OTS agent and sends appropriate messages to create/release transport circuits. The initial handshaking
-	between OSCARS and OTS is as described in \cite{OF1.0}. Handshaking involves exchange of
-	\texttt{OFPT\_HELLO}, \texttt{OFPT\_FEATURES\_REQUEST} and \texttt{OFPT\_FEATURES\_REPLY} messages.
-	However, since many of the attributes in the messages are Ethernet centric, we hand fill them to values
-	of our choice. We have retained the standard handshaking as per the spec to allow ease of adding
-	transport extensions to other Controller implementations. The Controller sends OpenFlow extension
-	messages to OTS for circuit provisioning/release.
+	\textit{On-Demand Secure Circuits and Advanced Reservation System} (OSCARS) \cite{Guok2008} is a provisioning system developed by Energy Sciences Network (ESnet). 
+	It provides multi-domain, high-bandwidth, virtual circuits that guarantee end-to-end network data transfer performance. Today, OSCARS virtual circuits carry about fifty 
+	percent of ESnet's annual 60 petabytes of traffic, supporting large scale sciences such as High Energy Physics, Climate, Computational Astrophysics, and Biological and Environmental Research.\\
+ 
+	The OSCARS system in this instance acts as a typical SDN controller, albeit with several specific extensions (see \ref{sec:ofext}) to leverage the transport OpenFlow capabilities 
+	of the OTS.  The initial handshake between OSCARS and OTS involves the characteristic exchange of \texttt{OFPT\_HELLO} followed by \texttt{OFPT\_FEATURES\_REQUEST} and 
+	\texttt{OFPT\_FEATURES\_REPLY} messages \cite{OF1.0}. However, OpenFlow extension messages as described above are sent for optical specific information.
 	
 	\subsection{OTS Agent - Virtual Switch}
 	\label{sec:otvs}
+	
+	The prototype OTS agent implementation is coupled with the Infinera DTN \cite{DTN}, which embodies the optical transport NE.  The DTN has fully
+	flexible OTN, SONET/SDH and Ethernet add/drop capabilities with OTN \cite{otn} line side wavelength Optical Carrier Groups (OCG), and includes an 
+	embedded GMPLS control plane for end-to-end routing and provisioning.  As part of the management suite, the DTN provides TL-1 interface access 
+	to the NE for troubleshooting, alarms and event notifications, and equipment, fault and performance monitoring.  The OTS agent leverages this 
+	TL-1 interface to communicate southbound with the NE, while exposing a northbound OpenFlow interface.  
+	This affords the flexibility of running the OTS instance outside the NE, as well as managing an NE of a different vendor.\\
+	
+	To determine the tributory ports and wavelengths to be used, a simple manually edited configuration file is referenced.  Given that
+	these are TDM circuits, the incoming traffic payload is digitally wrapped/containerized into OTN optical channels and transported.  
+	There is no header or label lookup done on incoming traffic, and therefore the configuration  file itself is sufficient as a simple flow table. 
+	In addition, the configuration file can specify "slices" of an NE that can be virtualized into separate tributory port/line side wavelength 
+	resources controlled by distinct OTS agents.  This allows service providers to sell wholesale bandwidth to multiple third party/tier-2 providers,
+	who can only control their portion of the equipment/resources.
+
+\iffalse
 	Our prototype OTS agent is bound to underlying physical transport NEs. Infinera DTN \cite{dtn} was used
 	as the optical transport NE. DTN has fully flexible SONET/SDH, OTN and Ethernet add/drop
 	capabilities with OTN \cite{otn} line side wavelength Optical Carrier Groups (OCG). It includes an
 	embedded GMPLS control plane for end-to-end routing and provisioning. As part of the management suite,
-	the DTN provides TL-1 interface to access the NE for troubleshooting, alarms and event
-	notifications, equipment, fault and performance monitoring. The northbound OpenFlow interface (with
+	the DTN provides TL-1 interface to access the NE for equipment \& service provisioning, change
+	notifications, fault and performance monitoring. The northbound OpenFlow interface (with
 	transport extensions) was explained in the previous sections. We use TL-1 to interface OTS with the NE.
-	For example, on receiving a circuit provisioning request from the Controller via OpenFlow, we convert
-	that request to a TL-1 equivalent command and inject it into the NE. \\
+	On receiving a circuit provisioning request from the Controller via OpenFlow, we convert
+	that request to a TL-1 equivalent message. \\
 
-	As for the tributory ports and the wavelengths to be used, we maintain a simple configuration file which
+	As for the tributary ports and the line side wavelengths to be used, we maintain a simple configuration file which
 	is manually edited before OTS is started. Given that these are TDM circuits, incoming traffic payload is
 	digitally wrapped/containerized into OTN optical channels and transported. There is no header or label
 	lookup to be performed on incoming traffic. Hence we don't need to maintain any flow tables and this
@@ -390,13 +472,14 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 	TCP/IP with the TL-1 agent. Also, if OTS needs to manage NE of another vendor, given that TL-1 is a
 	standardized interface, the migration should work without any hassles. However, there could be vendor 
 	specific TL-1 commands which would have to be handled appropriately if necessary.
+\fi
 
 \section{Results and Observations}
 \label{sec:results}
-	\subsection{Testbed}
+	\subsection{Network Setup}
 	\label{sec:testbed}
 	We made use of ESnet's Long Island Metropolitan Area Network (LIMAN) to demonstrate SDN controlling the
-	 transport optical backbone through OSCARS and OTS. Fig. \ref{fig:LIMAN} shows the testbed setup. DTN
+	transport optical backbone through OSCARS and OTS. Fig. \ref{fig:LIMAN} shows the setup. DTN
 	nodes A and B are SDN aware and two OTS agents were managing each of these NEs. The nodes connected
 	to ESnet's production network via DWDM fibers. There also exists a direct fiber connectivity between the two
 	nodes. There are two hosts with 40G Ethernet interfaces connected to each of these nodes. We setup two 40G 
@@ -407,24 +490,24 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 	\begin{figure}[htb]
 	\centering
 	\includegraphics[scale=0.50]{LIMAN.png}
-	\caption{Testbed Setup}
+	\caption{Network Setup}
 	\label{fig:LIMAN}
 	\end{figure}
 
 	\subsection{Measurements}
 	\label{sec:measure}
 	The measurements done were to reserve a 40G circuit from Node A to B (Fig. \ref{fig:LIMAN}). This only includes the time 
-	taken by the Controller to compute the path and to send the ofp\_xconn message. This doesn't include the variable
-	network time for the message to reach OTS and for the optical transport NE XCON programming and/or GMPLS control
-	messaging. These are not significant from the point of view of transport networks/NE as these are vendor/equipment
-	specific (XCON programming) and much of the latency in GMPLS messaging is due to fiber propagation delay. The control
-	plane messaging and NE timeslot programming is also dependent on the topology.
+	taken by the Controller to compute the path and to send the \texttt{ofp\_xconn} message. The time can be further improvised
+	subject to making use of faster processing platform for the Controller. This metric was specifically used as we attempt to highlight
+	the time it takes to setup the path using SDN Controller which helps to contrast with the time taken in case of a non-SDN approach. 
+	Further, the amount of time it takes to setup a circuit at the NE level remains the same irrespective of SDN or non-SDN approach.
 
 	\begin{center}
-		\begin{tabular} { |  c | c | c | c | }
+		\begin{tabular} { | c |  c | c | c | c | }
 			\hline
-			 Min & Max & Mean & Std. Dev \\ \hline
-			  2   &   7    & 2.84  & 0.98 \\
+			 Mode & Min & Max & Mean & Std. Dev \\ \hline
+			 Implicit & 2   &   7    & 2.84  & 0.98 \\
+			 Explicit & 2   &   5    & 2.95  & 0.87 \\
 			\hline
 		\end{tabular}
 		\captionof{table}{Circuit path computation latencies (s)}
@@ -443,16 +526,16 @@ OFP_ASSERT(sizeof(struct ofp_xconn) == 40);
 	implementation perspective, we wish to fully integrate the Monitoring and the Discovery agents into
 	OTS for fault/alarm propogation and port/link discovery respectively. Currently, the ports, optical 
 	channels and links are hand-configured through a configuration file for this prototype implementation.
-	But we would need a dedicated info model similar to Open vSwitch Database \cite{ovsdb} to store
+	But we would need a dedicated info model similar to Open vSwitch Database \cite{ovsdb} to house
 	these configuration information and advertise it to the Controller. This allows the Controller to discover
-	the complete topology depending on the mode of operation (Implicit/Explicit). JSON formatted data 
-	could be used to exchange these topology extracts between OTS and the Controller. Security is another
-	key aspect in the system. Our implementaiton uses long-lived TCP/IP sessions between the Controller
-	and the OTS agent. SSL/TLS sessions could be used instead. \\
+	the complete topology depending on the mode of operation (Implicit/Explicit). JSON encoded data 
+	could be used to exchange these topology extracts between OTS and the Controller. \\
+%	Security is another 	key aspect in the system. Our implementaiton uses long-lived TCP/IP sessions between the Controller
+%	and the OTS agent. SSL/TLS sessions could be used instead. \\
 
 	From the point of view of standardization, many important functions that are inherent to core transport networks
 	have to be factored in. For example, protection and restoration. Typically, these are part of the
-	control plane (MPLS FRR or GMPLS restoration).Thorough investigations need to happen if
+	control plane (MPLS FRR or GMPLS restoration).Thorough investigations need to happen to determine if
 	these have to be incorporated into OpenFlow. Or, these could continue to be a part of the underlying control
 	plane as in the case of Implicit mode. Further, if domain specific parameters (like optical impairments, OSNR etc)
 	are needed, these need not be a part of the protocol itself. Instead, a management interface like OFConfig or

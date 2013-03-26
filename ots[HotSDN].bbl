@@ -5,10 +5,17 @@
 \newblock {Fabric: a retrospective on evolving SDN}.
 \newblock In {\em {Proc. of HotSDN}\/} (2012).
 
-\bibitem{oscars}
-{\sc {ESnet}}.
-\newblock {On-Demand Secure Circuits and Advanced Reservation System},
-  http://www.es.net/services/virtual-circuits-oscars/.
+\bibitem{Das2012}
+{\sc Das, S., Parulkar, G., and McKeown, N.}
+\newblock {SDN Based Unified Control Architecture}.
+\newblock In {\em Photonics Conference (IPC), 2012 IEEE\/} (2012),
+  pp.~778--779.
+
+\bibitem{Guok2008}
+{\sc Guok, C., Robertson, D., Chaniotakisy, E., Thompson, M., Johnston, W., and
+  Tierney, B.}
+\newblock {A User Driven Dynamic Circuit Network Implementation}.
+\newblock In {\em GLOBECOM Workshops, 2008 IEEE\/} (2008), pp.~1--5.
 
 \bibitem{mpls}
 {\sc IETF}.
@@ -32,7 +39,7 @@
 \newblock {ovsdb-draft-00: The Open vSwitch Database Management Protocol},
   August 2012.
 
-\bibitem{dtn}
+\bibitem{DTN}
 {\sc {Infinera}}.
 \newblock {DTN} http://www.infinera.com/products/dtn.html.
 

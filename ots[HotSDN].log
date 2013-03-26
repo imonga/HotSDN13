@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.6.11)  25 MAR 2013 09:02
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.6.11)  25 MAR 2013 21:25
 entering extended mode
 **C:/Users/asadasivarao/Documents/GitHub/HotSDN13/ots[HotSDN].tex
 (C:/Users/asadasivarao/Documents/GitHub/HotSDN13/ots[HotSDN].tex
@@ -322,17 +322,29 @@ tion Net-works\T1/aer/m/n/10 ]:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--127
+Underfull \hbox (badness 10000) in paragraph at lines 118--122
 
  []
 
 
-Overfull \hbox (5.41829pt too wide) in paragraph at lines 128--138
-\T1/aer/m/n/10 works, clos-ing the end-to-end path. Given the dis-tributed
+Overfull \hbox (1.4706pt too wide) in paragraph at lines 123--133
+[]\T1/aer/m/n/10 In the In-ter-net core, tra-di-tion-ally, the de-sign ap-proac
+h
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--138
+Underfull \hbox (badness 10000) in paragraph at lines 123--133
+
+ []
+
+
+Overfull \hbox (1.1062pt too wide) in paragraph at lines 134--140
+[]\T1/aer/m/n/10 The lat-est trends in ap-pli-ca-tion de-liv-ery ar-chi-tec-tur
+es,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--140
 
  []
 
@@ -343,12 +355,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-Overfull \hbox (6.7767pt too wide) in paragraph at lines 151--159
-\T1/aer/m/n/10 us con-sider the com-mon sce-nario found in ser-vice provider
+Underfull \hbox (badness 10000) in paragraph at lines 141--147
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--159
+Underfull \hbox (badness 10000) in paragraph at lines 186--192
 
  []
 
@@ -356,164 +368,171 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--159
 File: MultiDomainLayer.png Graphic file (type png)
 
 <use MultiDomainLayer.png>
-Package pdftex.def Info: MultiDomainLayer.png used on input line 162.
+Package pdftex.def Info: MultiDomainLayer.png used on input line 195.
 (pdftex.def)             Requested size: 205.5173pt x 185.94423pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--174
+Overfull \hbox (18.04654pt too wide) in paragraph at lines 200--205
+\T1/aer/m/n/10 These con-nec-tions re-quire con-nec-tiv-ity and vary-ing amount
+s
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--205
 
  []
 
 <MLwoOF.png, id=15, 473.51906pt x 188.95593pt>
 File: MLwoOF.png Graphic file (type png)
  <use MLwoOF.png>
-Package pdftex.def Info: MLwoOF.png used on input line 177.
+Package pdftex.def Info: MLwoOF.png used on input line 208.
 (pdftex.def)             Requested size: 236.75894pt x 94.47772pt.
-
-Overfull \hbox (4.92874pt too wide) in paragraph at lines 182--191
-\T1/aer/m/n/10 en-abled light weight, vir-tual switch that man-ages a trans-
- []
-
-<MLwOF.png, id=17, 472.76625pt x 158.09062pt>
+ [2 <C:/Users/asadasivarao/Documents/GitHub/HotSDN13/MultiDomainLayer.png> <C:/
+Users/asadasivarao/Documents/GitHub/HotSDN13/MLwoOF.png>]
+<MLwOF.png, id=21, 472.76625pt x 158.09062pt>
 File: MLwOF.png Graphic file (type png)
  <use MLwOF.png>
-Package pdftex.def Info: MLwOF.png used on input line 194.
+Package pdftex.def Info: MLwOF.png used on input line 267.
 (pdftex.def)             Requested size: 236.38254pt x 79.0451pt.
-LaTeX Font Info:    Try loading font information for T1+aett on input line 204.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 277.
 
 
 (C:\MiKTeX\tex\latex\ae\t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 199--207
+Underfull \hbox (badness 10000) in paragraph at lines 272--280
 
  []
 
-[2 <C:/Users/asadasivarao/Documents/GitHub/HotSDN13/MultiDomainLayer.png> <C:/U
-sers/asadasivarao/Documents/GitHub/HotSDN13/MLwoOF.png> <C:/Users/asadasivarao/
-Documents/GitHub/HotSDN13/MLwOF.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 208--220
+
+Overfull \hbox (6.8866pt too wide) in paragraph at lines 281--293
+\T1/aer/m/n/10 dat-a-p-ath to cre-ate/up-date/re-lease cir-cuit-s/LSP. The dat-
 
  []
 
-<OTSArch.png, id=23, 571.38469pt x 248.42813pt>
+
+Overfull \hbox (11.71857pt too wide) in paragraph at lines 281--293
+\T1/aer/m/n/10 a-p-ath en-ti-ties could be Time slots, Cross con-nects (XCON)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--293
+
+ []
+
+<OTSArch.png, id=22, 571.38469pt x 248.42813pt>
 File: OTSArch.png Graphic file (type png)
  <use OTSArch.png>
-Package pdftex.def Info: OTSArch.png used on input line 248.
+Package pdftex.def Info: OTSArch.png used on input line 319.
 (pdftex.def)             Requested size: 211.40901pt x 91.91696pt.
 
-Overfull \hbox (3.40723pt too wide) in paragraph at lines 256--264
-[]\T1/aer/m/n/10 OpenFlow [11] is very L2/L3 cen-tric as of to-day. Given
+Overfull \hbox (3.40723pt too wide) in paragraph at lines 327--335
+[]\T1/aer/m/n/10 OpenFlow [12] is very L2/L3 cen-tric as of to-day. Given
  []
 
-[3 <C:/Users/asadasivarao/Documents/GitHub/HotSDN13/OTSArch.png>]
-Overfull \hbox (4.08672pt too wide) in paragraph at lines 299--304
-\T1/aer/m/n/10 plify con-trol plane by elim-i-nat-ing all the com-plex UNI/E-
- []
-
-<OTSExplicit.png, id=29, 609.77812pt x 347.79938pt>
+[3 <C:/Users/asadasivarao/Documents/GitHub/HotSDN13/MLwOF.png> <C:/Users/asadas
+ivarao/Documents/GitHub/HotSDN13/OTSArch.png>]
+<OTSExplicit.png, id=28, 609.77812pt x 347.79938pt>
 File: OTSExplicit.png Graphic file (type png)
  <use OTSExplicit.png>
-Package pdftex.def Info: OTSExplicit.png used on input line 307.
+Package pdftex.def Info: OTSExplicit.png used on input line 378.
 (pdftex.def)             Requested size: 225.61436pt x 128.68375pt.
 
-<OTSImplicit.png, id=30, 606.76688pt x 362.85562pt>
+<OTSImplicit.png, id=29, 606.76688pt x 362.85562pt>
 File: OTSImplicit.png Graphic file (type png)
  <use OTSImplicit.png>
-Package pdftex.def Info: OTSImplicit.png used on input line 333.
+Package pdftex.def Info: OTSImplicit.png used on input line 404.
 (pdftex.def)             Requested size: 224.50023pt x 134.25447pt.
 
-Overfull \hbox (5.59001pt too wide) in paragraph at lines 345--349
+[4 <C:/Users/asadasivarao/Documents/GitHub/HotSDN13/OTSExplicit.png> <C:/Users/
+asadasivarao/Documents/GitHub/HotSDN13/OTSImplicit.png>]
+Overfull \hbox (5.59001pt too wide) in paragraph at lines 419--422
 \T1/aer/m/n/10 vides multi-domain, high-bandwidth, vir-tual cir-cuits that
  []
 
 
-Overfull \hbox (4.71692pt too wide) in paragraph at lines 345--349
+Overfull \hbox (4.71692pt too wide) in paragraph at lines 419--422
 \T1/aer/m/n/10 guar-an-tee end-to-end net-work data trans-fer per-for-mance.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--349
-
- []
-
-[4 <C:/Users/asadasivarao/Documents/GitHub/HotSDN13/OTSExplicit.png> <C:/Users/
-asadasivarao/Documents/GitHub/HotSDN13/OTSImplicit.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 363--372
+Underfull \hbox (badness 10000) in paragraph at lines 419--422
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--385
+Overfull \hbox (3.59586pt too wide) in paragraph at lines 430--436
+\T1/aer/m/n/10 (OCG), and in-cludes an em-bed-ded GM-PLS con-trol plane
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 430--436
 
  []
 
-<LIMAN.png, id=35, 298.11375pt x 307.1475pt>
+<LIMAN.png, id=36, 298.11375pt x 307.1475pt>
 File: LIMAN.png Graphic file (type png)
  <use LIMAN.png>
-Package pdftex.def Info: LIMAN.png used on input line 409.
+Package pdftex.def Info: LIMAN.png used on input line 492.
 (pdftex.def)             Requested size: 149.0565pt x 153.57336pt.
  [5 <C:/Users/asadasivarao/Documents/GitHub/HotSDN13/LIMAN.png>]
-Overfull \hbox (2.7665pt too wide) in paragraph at lines 442--452
+Overfull \hbox (2.7665pt too wide) in paragraph at lines 525--535
 \T1/aer/m/n/10 /alarm pro-poga-tion and port/link dis-cov-ery re-spec-tively.
  []
 
 
-Overfull \hbox (2.67033pt too wide) in paragraph at lines 442--452
+Overfull \hbox (2.67033pt too wide) in paragraph at lines 525--535
 \T1/aer/m/n/10 Cur-rently, the ports, op-ti-cal chan-nels and links are hand-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 442--452
+Underfull \hbox (badness 10000) in paragraph at lines 525--535
 
  []
 
 
-Overfull \hbox (21.00366pt too wide) in paragraph at lines 453--460
+Overfull \hbox (21.00366pt too wide) in paragraph at lines 536--543
 \T1/aer/m/n/10 con-trol plane (MPLS FRR or GM-PLS restora-tion).Thorough
  []
 
 
-Overfull \hbox (1.81882pt too wide) in paragraph at lines 462--473
+Overfull \hbox (1.81882pt too wide) in paragraph at lines 545--556
 \T1/aer/m/n/10 providers to ef-fi-ciently en-gi-neer, man-age and evolve their
  []
 
 
-Overfull \hbox (1.25706pt too wide) in paragraph at lines 462--473
+Overfull \hbox (1.25706pt too wide) in paragraph at lines 545--556
 \T1/aer/m/n/10 re-spec-tive of what un-der-ly-ing lay-ers (L1/L2/L3) or tech-
  []
 
 
-Overfull \hbox (3.45914pt too wide) in paragraph at lines 462--473
+Overfull \hbox (3.45914pt too wide) in paragraph at lines 545--556
 \T1/aer/m/n/10 which al-lows multi-layer, multi-domain and multi-vendor
  []
 
-(C:\Users\asadasivarao\Documents\GitHub\HotSDN13\ots[HotSDN].bbl) [6] [7
-
-]
+(C:\Users\asadasivarao\Documents\GitHub\HotSDN13\ots[HotSDN].bbl) [6]
 (C:\Users\asadasivarao\Documents\GitHub\HotSDN13\ots[HotSDN].aux) ) 
 Here is how much of TeX's memory you used:
- 4002 strings out of 493923
- 50346 string characters out of 3154528
- 161628 words of memory out of 3000000
- 7196 multiletter control sequences out of 15000+200000
- 63536 words of font info for 91 fonts, out of 3000000 for 9000
+ 3972 strings out of 493923
+ 50084 string characters out of 3154528
+ 163628 words of memory out of 3000000
+ 7181 multiletter control sequences out of 15000+200000
+ 55921 words of font info for 71 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 41i,20n,58p,895b,1609s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,20n,58p,894b,1070s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/MiKTeX/f
 onts/enc/dvips/fontname/8r.enc}<C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10
 .pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.
-pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr9.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmti10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb
-><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/MiKTeX/fonts/type1/urw
-/helvetic/uhvb8a.pfb><C:/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/MiKTeX/
-fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C
-:/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ots[HotSDN].pdf (7 pages, 379604 bytes).
+e1/public/amsfonts/cm/cmr10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.
+pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmsy7.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.
+pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmtt8.pfb><C:/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C
+:/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/MiKTeX/fonts/type1/urw/times/u
+tmb8a.pfb><C:/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/MiKTeX/fonts/type1/ur
+w/times/utmri8a.pfb>
+Output written on ots[HotSDN].pdf (6 pages, 361548 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
+ 88 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
