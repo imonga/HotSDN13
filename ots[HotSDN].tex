@@ -172,8 +172,8 @@ There have been a lot of proposals to unify the control and management of packet
 \section{Architecture}
 \label{sec:arch}
 		
-	The central approach  \emph{abstracts}  the interface between packet and circuit layers leading to \emph{virtualization}
-	of the transport layer. Let us consider (Fig. \ref{fig:MLD}) - a common scenario found in service provider networks. The network is segmented into
+	The central approach is to  \emph{abstract}  the interface between packet and circuit layers, leading to \emph{virtualization}
+	of the transport layer. Let us consider a typical multi-layer service provider network (Fig. \ref{fig:MLD}). The network is segmented into
 	various layers each running their own control plane for routing and signaling. Each layer may have equipment from different vendors. Multi-layer
 	integration becomes a challenge as 1) GMPLS protocols for multi-layer require UNI relationship which hides each layer's topology (Fig. \ref{fig:MLwoOF})
 	 2) multi-vendor implementations of GMPLS protocols and path-finding are fairly different with interoperability at a least common denominator of functionality 
